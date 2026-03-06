@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Verity Cooper | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <style>
 
@@ -22,9 +23,9 @@
 --accent:#d46aa2;
 --tag-bg:#ffe3f1;
 --tag-text:#c85a93;
---blob1:#ffd6e7;
---blob2:#f7d6ff;
---blob3:#ffe3f1;
+--particle1:#ff8fcf;
+--particle2:#ffc2e6;
+--particle3:#cba6ff;
 }
 
 [data-theme="dark"]{
@@ -34,42 +35,37 @@
 --accent:#ff9dc8;
 --tag-bg:#3c2f3a;
 --tag-text:#ffb4d6;
---blob1:#34263c;
---blob2:#3b2b45;
---blob3:#2c2335;
+--particle1:#ff79c6;
+--particle2:#8be9fd;
+--particle3:#bd93f9;
 }
 
 /* ---------- BASE ---------- */
 
 body{
 font-family:'Poppins',sans-serif;
+margin:0;
 background:var(--bg);
 color:var(--text);
-margin:0;
 transition:background 0.3s,color 0.3s;
 }
 
-/* ---------- BACKGROUND LAYER ---------- */
+/* ---------- PARTICLES BACKGROUND ---------- */
 
-.animated-bg{
+#particles-js{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
 z-index:-1;
-background:
-radial-gradient(circle at 20% 20%,var(--blob1),transparent 40%),
-radial-gradient(circle at 80% 30%,var(--blob2),transparent 40%),
-radial-gradient(circle at 50% 80%,var(--blob3),transparent 40%);
-opacity:0.35;
 }
 
 /* ---------- HEADER ---------- */
 
 header{
 background:linear-gradient(135deg,#ffd6e7,#ffe3f1,#f7d6ff);
-padding:90px 20px 120px 20px;
+padding:90px 20px 120px;
 text-align:center;
 position:relative;
 overflow:hidden;
@@ -90,7 +86,7 @@ margin:8px 0;
 width:80px;
 height:4px;
 background:#f3a6c4;
-margin:14px auto 22px auto;
+margin:14px auto 22px;
 border-radius:3px;
 }
 
@@ -109,7 +105,7 @@ border:none;
 font-family:'Poppins',sans-serif;
 }
 
-/* ---------- SOCIAL ICONS ---------- */
+/* ---------- ICONS ---------- */
 
 .social-links{
 margin-top:20px;
@@ -130,14 +126,13 @@ transition:transform 0.2s;
 transform:translateY(-3px);
 }
 
-/* ---------- WAVE DIVIDER ---------- */
+/* ---------- WAVE ---------- */
 
 .wave-divider{
 position:absolute;
 bottom:0;
 left:0;
 width:100%;
-overflow:hidden;
 line-height:0;
 }
 
@@ -150,8 +145,8 @@ display:block;
 /* ---------- CONTENT ---------- */
 
 section{
-max-width:1000px;
-margin:0 auto;
+max-width:1100px;
+margin:auto;
 padding:60px 25px;
 }
 
@@ -164,20 +159,21 @@ margin-bottom:25px;
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:30px;
 }
 
 .project{
 background:var(--card);
 padding:25px;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
+border-radius:14px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
 transition:transform 0.2s;
 }
 
 .project:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 /* ---------- TAGS ---------- */
@@ -218,17 +214,13 @@ font-size:14px;
 line-height:1.6;
 }
 
-footer a{
-color:var(--accent);
-}
-
 </style>
 
 </head>
 
 <body>
 
-<div class="animated-bg"></div>
+<div id="particles-js"></div>
 
 <header>
 
@@ -241,11 +233,9 @@ color:var(--accent);
 </div>
 
 <h1>Verity Cooper</h1>
-
 <div class="name-divider"></div>
 
 <p>BSc (Hons) Information Technology Student</p>
-
 <p>Cybersecurity • Digital Forensics • Software Projects • AI Ethics</p>
 
 <div class="social-links">
@@ -269,20 +259,10 @@ color:var(--accent);
 </div>
 
 <div class="wave-divider">
-
-<svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-
-<path fill="#f8e4f0" fill-opacity="0.7"
+<svg viewBox="0 0 1440 320">
+<path fill="var(--bg)" fill-opacity="0.8"
 d="M0,224L60,213.3C120,203,240,181,360,186.7C480,192,600,224,720,229.3C840,235,960,213,1080,197.3C1200,181,1320,171,1380,165.3L1440,160L1440,320L0,320Z"></path>
-
-<path fill="#f3d3e6" fill-opacity="0.6"
-d="M0,256L60,240C120,224,240,192,360,186.7C480,181,600,203,720,208C840,213,960,203,1080,197.3C1200,192,1320,192,1380,192L1440,192L1440,320L0,320Z"></path>
-
-<path fill="#faf6fb"
-d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,256C1120,256,1280,224,1360,208L1440,192L1440,320L0,320Z"></path>
-
 </svg>
-
 </div>
 
 </header>
@@ -304,21 +284,34 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 <div class="projects-grid">
 
 <div class="project">
-
 <h3>Story Prompt Generator</h3>
-
-<p>A Python program that generates random story prompts based on genre and trope selection.</p>
+<p>A Python program that generates random story prompts based on user-selected genres and tropes.</p>
 
 <div class="tags">
 <span class="tag">Python</span>
 <span class="tag">CLI</span>
-<span class="tag">Generator</span>
+<span class="tag">Random Generator</span>
 </div>
 
-<p>
-<a href="https://github.com/veritycooper">View on GitHub</a>
-</p>
+<p><a href="https://github.com/veritycooper">View on GitHub</a></p>
+</div>
 
+<div class="project">
+<h3>Future Project</h3>
+<p>Additional projects will be added here as the portfolio grows.</p>
+
+<div class="tags">
+<span class="tag">Coming Soon</span>
+</div>
+</div>
+
+<div class="project">
+<h3>Future Project</h3>
+<p>More Python and web development projects will appear here.</p>
+
+<div class="tags">
+<span class="tag">In Progress</span>
+</div>
 </div>
 
 </div>
@@ -331,13 +324,13 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 
 <p style="font-size:12px">
 
-GitHub by Guillaume Beaulieu from <a href="https://thenounproject.com/browse/icons/term/github/" target="_blank">The Noun Project</a><br>
+GitHub by Guillaume Beaulieu from <a href="https://thenounproject.com">The Noun Project</a><br>
 
-Graduation Cap by Geni Alando from <a href="https://thenounproject.com/browse/icons/term/graduation-cap/" target="_blank">The Noun Project</a><br>
+Graduation Cap by Geni Alando from <a href="https://thenounproject.com">The Noun Project</a><br>
 
-Mail by Ria Fitriana from <a href="https://thenounproject.com/browse/icons/term/mail/" target="_blank">The Noun Project</a><br>
+Mail by Ria Fitriana from <a href="https://thenounproject.com">The Noun Project</a><br>
 
-Briefcase by Alzam from <a href="https://thenounproject.com/browse/icons/term/briefcase/" target="_blank">The Noun Project</a>
+Briefcase by Alzam from <a href="https://thenounproject.com">The Noun Project</a>
 
 </p>
 
@@ -345,28 +338,53 @@ Briefcase by Alzam from <a href="https://thenounproject.com/browse/icons/term/br
 
 <script>
 
+/* ---------- THEME SWITCH ---------- */
+
 const select=document.getElementById("theme-select");
 
 function applyTheme(theme){
+
 if(theme==="system"){
 document.documentElement.removeAttribute("data-theme");
 }else{
 document.documentElement.setAttribute("data-theme",theme);
 }
+
+localStorage.setItem("theme",theme);
+loadParticles();
 }
 
-select.addEventListener("change",()=>{
-const theme=select.value;
-localStorage.setItem("theme",theme);
-applyTheme(theme);
-});
+select.addEventListener("change",()=>applyTheme(select.value));
 
 const savedTheme=localStorage.getItem("theme")||"system";
 select.value=savedTheme;
 applyTheme(savedTheme);
 
+/* ---------- PARTICLES ---------- */
+
+function loadParticles(){
+
+const dark=document.documentElement.getAttribute("data-theme")==="dark";
+
+const colors=dark
+? ["#ff79c6","#8be9fd","#bd93f9"]
+: ["#ff8fcf","#ffc2e6","#cba6ff"];
+
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+color:{value:colors},
+shape:{type:"circle"},
+opacity:{value:0.8,random:true},
+size:{value:3,random:true},
+move:{enable:true,speed:1}
+},
+retina_detect:true
+});
+
+}
+
 </script>
 
 </body>
-
 </html>
