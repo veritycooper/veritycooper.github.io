@@ -1,285 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Verity Cooper | Portfolio</title>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* ---------- GENERAL ---------- */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: "Segoe UI", sans-serif;
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #faf6fb;
+margin: 0;
+padding: 0;
+color: #333;
 }
 
-body{
-transition:background 0.3s,color 0.3s;
+header {
+background: linear-gradient(135deg, #ffd6e7, #ffe3f1, #f7d6ff);
+padding: 90px 20px 100px 20px;
+text-align: center;
+position: relative;
 }
 
-/* ---------- PARTICLES BACKGROUND ---------- */
-
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-z-index:-1;
+header h1 {
+font-size: 44px;
+font-weight: 500;
+margin-bottom: 0;
 }
 
-/* ---------- THEMES ---------- */
-
-body.light{
-background: linear-gradient(135deg,#f3d6e3,#d7c6f3);
-color:#333;
+header p {
+font-weight: 300;
+margin-top: 10px;
 }
 
-body.dark{
-background:#0a0a14;
-color:white;
+.name-divider {
+width: 80px;
+height: 4px;
+background: #f3a6c4;
+margin: 14px auto 22px auto;
+border-radius: 3px;
 }
 
-/* ---------- HEADER ---------- */
+/* Social Icons */
 
-header{
-
-background: linear-gradient(135deg,#f2dce7,#e0d4f4);
-
-text-align:center;
-
-padding:120px 20px 140px;
-
-position:relative;
-
-color:#333;
-
+.icon {
+width: 28px;
+height: 28px;
+padding: 10px;
+margin: 0 8px;
+background: white;
+border-radius: 50%;
+box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-h1{
-
-font-size:56px;
-
-margin-bottom:10px;
-
+.icon:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-.subtitle{
+/* Multi-wave divider */
 
-font-size:18px;
-
-opacity:0.9;
-
+.wave-divider {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+overflow: hidden;
+line-height: 0;
 }
 
-.divider{
-width:80px;
-height:5px;
-background:#d99aac;
-margin:20px auto;
-border-radius:10px;
-
+.wave-divider svg {
+display: block;
+width: 100%;
+height: 140px;
 }
 
-body.dark header{
-color:white;
+/* Content sections */
+
+section {
+max-width: 1000px;
+margin: auto;
+padding: 50px 25px;
 }
 
-body.light header{
-color:#333;
+h2 {
+font-weight: 500;
+margin-bottom: 25px;
 }
 
-/* ---------- HEADER TEXT ---------- */
+/* Projects Grid */
 
-.subtitle{
-font-size:20px;
-opacity:0.9;
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 25px;
 }
 
-.divider{
-width:80px;
-height:5px;
-background:#d27c9a;
-margin:20px auto;
-border-radius:10px;
+.project {
+background: white;
+padding: 25px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+transition: transform 0.2s ease;
 }
 
-/* ---------- ICONS ---------- */
-
-.icons{
-display:flex;
-justify-content:center;
-gap:25px;
-margin-top:25px;
+.project:hover {
+transform: translateY(-5px);
 }
 
-.icon{
-width:60px;
-height:60px;
-border-radius:50%;
-background:white;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 6px 15px rgba(0,0,0,0.12);
+/* Project Tags */
+
+.tags {
+margin-top: 10px;
 }
 
-.icon img{
-width:26px;
+.tag {
+display: inline-block;
+background: #ffe3f1;
+color: #c85a93;
+padding: 4px 10px;
+border-radius: 8px;
+font-size: 12px;
+margin-right: 6px;
 }
 
-/* ---------- THEME SELECT ---------- */
+/* Links */
 
-.theme-toggle{
-position:fixed;
-top:20px;
-right:20px;
-z-index:1000;
+a {
+color: #d46aa2;
+text-decoration: none;
+font-weight: 500;
 }
 
-/* ---------- WAVE DIVIDER ---------- */
-
-.wave{
-position:absolute;
-bottom:-1px;
-width:100%;
-line-height:0;
+a:hover {
+text-decoration: underline;
 }
 
-.wave svg{
-width:100%;
-height:120px;
-}
+/* Footer */
 
-.wave path{
-fill:white;
-}
-
-/* ---------- SECTIONS ---------- */
-
-section{
-padding:120px 10%;
-max-width:1200px;
-margin:auto;
-}
-
-/* ---------- PROJECT GRID ---------- */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-margin-top:40px;
-}
-
-@media(max-width:900px){
-.projects{
-grid-template-columns:1fr 1fr;
-}
-}
-
-@media(max-width:600px){
-.projects{
-grid-template-columns:1fr;
-}
-}
-
-/* ---------- CARDS ---------- */
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-body.dark .card{
-background:#1c1c2b;
-}
-
-/* ---------- TAGS ---------- */
-
-.tags{
-margin-top:15px;
-}
-
-.tag{
-display:inline-block;
-padding:6px 12px;
-border-radius:12px;
-background:#f3d6e3;
-font-size:12px;
-margin-right:5px;
-}
-
-/* ---------- FOOTER ---------- */
-
-footer{
-text-align:center;
-padding:60px 20px;
-font-size:14px;
+footer {
+text-align: center;
+padding: 30px;
+color: #888;
+font-size: 14px;
 }
 
 </style>
+
 </head>
 
-<body class="light">
-
-<div id="particles-js"></div>
-
-<select class="theme-toggle" onchange="changeTheme(this.value)">
-<option value="light">Light</option>
-<option value="dark">Dark</option>
-<option value="system">System</option>
-</select>
+<body>
 
 <header>
 
 <h1>Verity Cooper</h1>
 
-<div class="divider"></div>
+<div class="name-divider"></div>
 
-<p class="subtitle">
-BSc (Hons) Information Technology Student
-</p>
+<p>BSc (Hons) Information Technology Student</p>
 
-<p class="subtitle">
-Cybersecurity • Digital Forensics • Software Projects • AI Ethics
-</p>
+<p>Cybersecurity • Digital Forensics • Software Projects • AI Ethics</p>
 
-<div class="icons">
+<div class="social-links">
 
 <a href="https://github.com/veritycooper">
-<div class="icon">
-<img src="images/cat.png">
-</div>
+<img src="images/github.png" class="icon">
 </a>
 
-<div class="icon">
-<img src="images/briefcase.png">
-</div>
+<a href="https://www.linkedin.com/in/verity-cooper/">
+<img src="images/linkedin.png" class="icon">
+</a>
 
-<div class="icon">
-<img src="images/mail.png">
-</div>
+<a href="mailto:verity.cooper24@gmail.com">
+<img src="images/mail.png" class="icon">
+</a>
 
-<div class="icon">
-<img src="images/graduation.png">
-</div>
+<a href="https://www.bcs.org/">
+<img src="images/graduation.png" class="icon">
+</a>
 
 </div>
+<div class="wave-divider">
 
-<div class="wave">
-<svg viewBox="0 0 1440 320">
-<path d="M0,192L80,170C160,149,320,107,480,112C640,117,800,171,960,176C1120,181,1280,139,1360,117L1440,96L1440,320L0,320Z"></path>
+<svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+
+<path fill="#f8e4f0" fill-opacity="0.7"
+d="M0,224L60,213.3C120,203,240,181,360,186.7C480,192,600,224,720,229.3C840,235,960,213,1080,197.3C1200,181,1320,171,1380,165.3L1440,160L1440,320L0,320Z"></path>
+
+<path fill="#f3d3e6" fill-opacity="0.6"
+d="M0,256L60,240C120,224,240,192,360,186.7C480,181,600,203,720,208C840,213,960,203,1080,197.3C1200,192,1320,192,1380,192L1440,192L1440,320L0,320Z"></path>
+
+<path fill="#faf6fb"
+d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,256C1120,256,1280,224,1360,208L1440,192L1440,320L0,320Z"></path>
+
 </svg>
+
 </div>
 
 </header>
@@ -289,9 +208,7 @@ Cybersecurity • Digital Forensics • Software Projects • AI Ethics
 <h2>About Me</h2>
 
 <p>
-
 I am a final-year BSc (Hons) Information Technology student with interests in cybersecurity, digital forensics, and ethical computing. I enjoy building practical software projects and exploring how technology can be used responsibly and securely.
-
 </p>
 
 </section>
@@ -300,37 +217,31 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 
 <h2>Projects</h2>
 
-<div class="projects">
+<div class="projects-grid">
 
-<div class="card">
+<div class="project">
 
 <h3>Story Prompt Generator</h3>
 
-<p>
-A Python program that generates random story prompts based on genre and trope selection.
-</p>
+<p>A Python program that generates random story prompts based on user-selected genres and tropes.</p>
 
 <div class="tags">
-
 <span class="tag">Python</span>
 <span class="tag">CLI</span>
-<span class="tag">Generator</span>
-
+<span class="tag">Random Generator</span>
 </div>
 
-<p style="margin-top:15px">
-<a href="#">View on GitHub</a>
+<p>
+<a href="https://github.com/veritycooper/story-prompt-generator">View on GitHub</a>
 </p>
 
 </div>
 
-<div class="card">
+<div class="project">
 
 <h3>Future Project</h3>
 
-<p>
-Additional projects will appear here as my portfolio grows.
-</p>
+<p>Additional projects will be added here as the portfolio grows.</p>
 
 <div class="tags">
 <span class="tag">Coming Soon</span>
@@ -338,13 +249,11 @@ Additional projects will appear here as my portfolio grows.
 
 </div>
 
-<div class="card">
+<div class="project">
 
 <h3>Future Project</h3>
 
-<p>
-More Python and web development projects will appear here.
-</p>
+<p>More Python and web development projects will appear here.</p>
 
 <div class="tags">
 <span class="tag">In Progress</span>
@@ -358,82 +267,27 @@ More Python and web development projects will appear here.
 
 <footer>
 
-© 2026 Verity Cooper
+<p>© 2026 Verity Cooper</p>
 
-<br><br>
+<p style="font-size:12px; max-width:700px; margin:auto; line-height:1.6;">
+Icons used on this site are licensed under CC BY 3.0 from the Noun Project:<br><br>
 
-Icons used on this site are licensed under CC BY 3.0 from The Noun Project.
+GitHub by Guillaume Beaulieu from 
+<a href="https://thenounproject.com/browse/icons/term/github/" target="_blank">The Noun Project</a><br>
 
-<br>
+Graduation Cap by Geni Alando from 
+<a href="https://thenounproject.com/browse/icons/term/graduation-cap/" target="_blank">The Noun Project</a><br>
 
-GitHub by Guillaume Beaulieu • Graduation Cap by Geni Alando • Mail by Ria Fitriana • Briefcase by Alzam
+Mail by Ria Fitriana from 
+<a href="https://thenounproject.com/browse/icons/term/mail/" target="_blank">The Noun Project</a><br>
+
+Briefcase by Alzam from 
+<a href="https://thenounproject.com/browse/icons/term/briefcase/" target="_blank">The Noun Project</a>
+
+</p>
 
 </footer>
 
-<script>
-
-/* ---------- THEME SWITCH ---------- */
-
-function changeTheme(mode){
-
-if(mode==="system"){
-
-const dark = window.matchMedia('(prefers-color-scheme: dark)').matches
-document.body.className = dark ? "dark" : "light"
-
-}else{
-
-document.body.className = mode
-
-}
-
-loadParticles()
-
-}
-
-/* ---------- PARTICLES ---------- */
-
-function loadParticles(){
-
-const dark = document.body.classList.contains("dark")
-
-particlesJS("particles-js",{
-
-particles:{
-
-number:{ value:80 },
-
-color:{ value: dark ? "#ffffff" : "#555555" },
-
-shape:{ type:"circle" },
-
-opacity:{ value:0.7 },
-
-size:{ value:3 },
-
-line_linked:{
-enable:true,
-distance:150,
-color: dark ? "#ffffff" : "#555555",
-opacity:0.4
-},
-
-move:{
-enable:true,
-speed:1
-}
-
-},
-
-retina_detect:true
-
-})
-
-}
-
-loadParticles()
-
-</script>
-
 </body>
+
 </html>
