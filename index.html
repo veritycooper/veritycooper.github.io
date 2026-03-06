@@ -44,7 +44,7 @@ margin: 14px auto 22px auto;
 border-radius: 3px;
 }
 
-/* Social Icons */
+/* ---------- Social Icons CSS ---------- */
 
 .icon {
 width: 28px;
@@ -62,7 +62,7 @@ transform: translateY(-3px);
 box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* Multi-wave divider */
+/* ---------- Multi-wave divider CSS ---------- */
 
 .wave-divider {
 position: absolute;
@@ -79,7 +79,7 @@ width: 100%;
 height: 140px;
 }
 
-/* Content sections */
+/* ---------- Content sections CSS ---------- */
 
 section {
 max-width: 1000px;
@@ -92,7 +92,7 @@ font-weight: 500;
 margin-bottom: 25px;
 }
 
-/* Projects Grid */
+/* ---------- Projects Grid CSS ---------- */
 
 .projects-grid {
 display: grid;
@@ -112,7 +112,7 @@ transition: transform 0.2s ease;
 transform: translateY(-5px);
 }
 
-/* Project Tags */
+/* ---------- Project Tags CSS ---------- */
 
 .tags {
 margin-top: 10px;
@@ -128,7 +128,7 @@ font-size: 12px;
 margin-right: 6px;
 }
 
-/* Links */
+/* ---------- Social Links CSS ---------- */
 
 a {
 color: #d46aa2;
@@ -140,7 +140,7 @@ a:hover {
 text-decoration: underline;
 }
 
-/* Footer */
+/* ---------- Footer CSS ---------- */
 
 footer {
 text-align: center;
@@ -153,40 +153,44 @@ font-size: 14px;
 
 </head>
 
+<!-- ---------- HEADER START ---------- -->
+  
 <body>
 
 <header>
 
-<h1>Verity Cooper</h1>
+<h1>Verity Cooper</h1> <!-- ---------- my name ---------- -->
 
-<div class="name-divider"></div>
+<div class="name-divider"></div> <!-- ---------- the little pink line ---------- -->
 
-<p>BSc (Hons) Information Technology Student</p>
+<p>BSc (Hons) Information Technology Student</p> <!-- ---------- what i am  / my "role" ---------- --> 
 
-<p>Cybersecurity • Digital Forensics • Software Projects • AI Ethics</p>
+<p>Cybersecurity • Digital Forensics • Software Projects • AI Ethics</p> <!-- ---------- what i'm interested in ---------- -->
 
-<div class="social-links">
+<div class="social-links"> <!-- ---------- container for social links ---------- -->
 
-<a href="https://github.com/veritycooper">
-<img src="images/github.png" class="icon">
+<a href="https://github.com/veritycooper"> <!-- ---------- my github account ---------- -->
+<img src="images/cat.png" class="icon"> <!-- ---------- the github icon ---------- -->
 </a>
 
-<a href="https://www.linkedin.com/in/verity-cooper/">
-<img src="images/linkedin.png" class="icon">
+<a href="https://www.linkedin.com/in/verity-cooper/"> <!-- ---------- my linkedin account ---------- -->
+<img src="images/briefcase.png" class="icon"> <!-- ---------- the linkedin icon ---------- -->
 </a>
 
-<a href="mailto:verity.cooper24@gmail.com">
-<img src="images/mail.png" class="icon">
+<a href="mailto:verity.cooper24@gmail.com"> <!-- ---------- my email address ---------- -->
+<img src="images/mail.png" class="icon"> <!-- ---------- the email icon ---------- -->
 </a>
 
-<a href="https://www.bcs.org/">
-<img src="images/graduation.png" class="icon">
+<a href="https://www.bcs.org/"> <!-- ---------- my bcs account ---------- -->
+<img src="images/graduation.png" class="icon"> <!-- ---------- the bcs icon ---------- -->
 </a>
 
 </div>
+
+<!-- ---------- WAVE DIVIDER START ---------- -->
 <div class="wave-divider">
 
-<svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+<svg viewBox="0 0 1440 320" preserveAspectRatio="none"> <!-- ---------- position and dimension of wave divider ---------- -->
 
 <path fill="#f8e4f0" fill-opacity="0.7"
 d="M0,224L60,213.3C120,203,240,181,360,186.7C480,192,600,224,720,229.3C840,235,960,213,1080,197.3C1200,181,1320,171,1380,165.3L1440,160L1440,320L0,320Z"></path>
@@ -203,9 +207,11 @@ d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,256C1120,256,1280,2
 
 </header>
 
+
+<!-- ---------- MAIN CONTENT START ---------- -->
 <section>
 
-<h2>About Me</h2>
+<h2>About Me</h2> <!-- ---------- about me header ---------- -->
 
 <p>
 I am a final-year BSc (Hons) Information Technology student with interests in cybersecurity, digital forensics, and ethical computing. I enjoy building practical software projects and exploring how technology can be used responsibly and securely.
@@ -217,45 +223,45 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 
 <h2>Projects</h2>
 
-<div class="projects-grid">
+<div class="projects-grid"> <!-- ---------- 3 card layout call ---------- -->
 
-<div class="project">
+<div class="project"> <!-- ---------- card 1 ---------- -->
 
 <h3>Story Prompt Generator</h3>
 
 <p>A Python program that generates random story prompts based on user-selected genres and tropes.</p>
 
-<div class="tags">
+<div class="tags"> <!-- ---------- technical snippet of the project ---------- -->
 <span class="tag">Python</span>
 <span class="tag">CLI</span>
 <span class="tag">Random Generator</span>
 </div>
 
 <p>
-<a href="https://github.com/veritycooper/story-prompt-generator">View on GitHub</a>
+<a href="https://github.com/veritycooper/story-prompt-generator">View on GitHub</a> <!-- ---------- link to project ---------- -->
 </p>
 
 </div>
 
-<div class="project">
+<div class="project"> <!-- ---------- card 2 ---------- -->
 
-<h3>Future Project</h3>
+<h3>Future Project</h3> <!-- ---------- undetermined ---------- -->
 
 <p>Additional projects will be added here as the portfolio grows.</p>
 
-<div class="tags">
+<div class="tags"> <!-- ---------- technical snippet of code ---------- -->
 <span class="tag">Coming Soon</span>
 </div>
 
 </div>
 
-<div class="project">
+<div class="project"> <!-- ---------- card 3 ---------- -->
 
-<h3>Future Project</h3>
+<h3>Future Project</h3> <!-- ---------- undetermined ---------- -->
 
 <p>More Python and web development projects will appear here.</p>
 
-<div class="tags">
+<div class="tags"> <!-- ---------- technical snippet of code ---------- -->
 <span class="tag">In Progress</span>
 </div>
 
@@ -265,24 +271,25 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 
 </section>
 
+  <!-- ---------- START OF FOOTER - NO CHANGES AFTER THIS POINT ---------- -->
 <footer>
 
-<p>© 2026 Verity Cooper</p>
+<p>© 2026 Verity Cooper</p> <!-- ---------- my little copyright ---------- -->
 
 <p style="font-size:12px; max-width:700px; margin:auto; line-height:1.6;">
 Icons used on this site are licensed under CC BY 3.0 from the Noun Project:<br><br>
 
 GitHub by Guillaume Beaulieu from 
-<a href="https://thenounproject.com/browse/icons/term/github/" target="_blank">The Noun Project</a><br>
+<a href="https://thenounproject.com/browse/icons/term/github/" target="_blank">The Noun Project</a><br> <!-- ---------- credit for the cat ---------- -->
 
 Graduation Cap by Geni Alando from 
-<a href="https://thenounproject.com/browse/icons/term/graduation-cap/" target="_blank">The Noun Project</a><br>
+<a href="https://thenounproject.com/browse/icons/term/graduation-cap/" target="_blank">The Noun Project</a><br> <!-- ---------- credit for the hat ---------- -->
 
 Mail by Ria Fitriana from 
-<a href="https://thenounproject.com/browse/icons/term/mail/" target="_blank">The Noun Project</a><br>
+<a href="https://thenounproject.com/browse/icons/term/mail/" target="_blank">The Noun Project</a><br> <!-- ---------- credit for the mail ---------- -->
 
 Briefcase by Alzam from 
-<a href="https://thenounproject.com/browse/icons/term/briefcase/" target="_blank">The Noun Project</a>
+<a href="https://thenounproject.com/browse/icons/term/briefcase/" target="_blank">The Noun Project</a> <!-- ---------- credit for the briefcase ---------- -->
 
 </p>
 
