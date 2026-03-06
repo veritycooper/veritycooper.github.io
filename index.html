@@ -4,15 +4,16 @@
 
 <head>
 
-<title>Verity Cooper | Portfolio</title>
-
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Verity Cooper | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* ---------------- THEME VARIABLES ---------------- */
+/* ---------- THEME VARIABLES ---------- */
 
 :root{
 --bg:#faf6fb;
@@ -21,6 +22,9 @@
 --accent:#d46aa2;
 --tag-bg:#ffe3f1;
 --tag-text:#c85a93;
+--blob1:#ffd6e7;
+--blob2:#f7d6ff;
+--blob3:#ffe3f1;
 }
 
 [data-theme="dark"]{
@@ -30,37 +34,56 @@
 --accent:#ff9dc8;
 --tag-bg:#3c2f3a;
 --tag-text:#ffb4d6;
+--blob1:#34263c;
+--blob2:#3b2b45;
+--blob3:#2c2335;
 }
 
-/* ---------------- BASE STYLING ---------------- */
+/* ---------- BASE ---------- */
 
 body{
 font-family:'Poppins',sans-serif;
 background:var(--bg);
 color:var(--text);
 margin:0;
-padding:0;
 transition:background 0.3s,color 0.3s;
 }
 
-/* ---------------- HEADER ---------------- */
+/* ---------- BACKGROUND LAYER ---------- */
+
+.animated-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background:
+radial-gradient(circle at 20% 20%,var(--blob1),transparent 40%),
+radial-gradient(circle at 80% 30%,var(--blob2),transparent 40%),
+radial-gradient(circle at 50% 80%,var(--blob3),transparent 40%);
+opacity:0.35;
+}
+
+/* ---------- HEADER ---------- */
 
 header{
 background:linear-gradient(135deg,#ffd6e7,#ffe3f1,#f7d6ff);
 padding:90px 20px 120px 20px;
 text-align:center;
 position:relative;
+overflow:hidden;
 }
 
 header h1{
 font-size:44px;
 font-weight:500;
-margin-bottom:0;
+margin-bottom:5px;
 }
 
 header p{
 font-weight:300;
-margin-top:10px;
+margin:8px 0;
 }
 
 .name-divider{
@@ -71,7 +94,22 @@ margin:14px auto 22px auto;
 border-radius:3px;
 }
 
-/* ---------------- SOCIAL ICONS ---------------- */
+/* ---------- THEME SELECTOR ---------- */
+
+.theme-toggle{
+position:absolute;
+top:20px;
+right:25px;
+}
+
+.theme-toggle select{
+padding:6px 10px;
+border-radius:8px;
+border:none;
+font-family:'Poppins',sans-serif;
+}
+
+/* ---------- SOCIAL ICONS ---------- */
 
 .social-links{
 margin-top:20px;
@@ -85,28 +123,14 @@ margin:0 8px;
 background:white;
 border-radius:50%;
 box-shadow:0 4px 10px rgba(0,0,0,0.08);
-transition:transform 0.2s,box-shadow 0.2s;
+transition:transform 0.2s;
 }
 
 .icon:hover{
 transform:translateY(-3px);
-box-shadow:0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* ---------------- THEME SELECTOR ---------------- */
-
-.theme-toggle{
-margin-top:25px;
-}
-
-.theme-toggle select{
-padding:6px 10px;
-border-radius:8px;
-border:none;
-font-family:'Poppins',sans-serif;
-}
-
-/* ---------------- WAVE DIVIDER ---------------- */
+/* ---------- WAVE DIVIDER ---------- */
 
 .wave-divider{
 position:absolute;
@@ -119,16 +143,16 @@ line-height:0;
 
 .wave-divider svg{
 width:100%;
-height:140px;
+height:120px;
 display:block;
 }
 
-/* ---------------- CONTENT ---------------- */
+/* ---------- CONTENT ---------- */
 
 section{
 max-width:1000px;
-margin:auto;
-padding:50px 25px;
+margin:0 auto;
+padding:60px 25px;
 }
 
 h2{
@@ -136,7 +160,7 @@ font-weight:500;
 margin-bottom:25px;
 }
 
-/* ---------------- PROJECT GRID ---------------- */
+/* ---------- PROJECT GRID ---------- */
 
 .projects-grid{
 display:grid;
@@ -156,7 +180,7 @@ transition:transform 0.2s;
 transform:translateY(-5px);
 }
 
-/* ---------------- PROJECT TAGS ---------------- */
+/* ---------- TAGS ---------- */
 
 .tags{
 margin-top:10px;
@@ -172,7 +196,7 @@ font-size:12px;
 margin-right:6px;
 }
 
-/* ---------------- LINKS ---------------- */
+/* ---------- LINKS ---------- */
 
 a{
 color:var(--accent);
@@ -184,7 +208,7 @@ a:hover{
 text-decoration:underline;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* ---------- FOOTER ---------- */
 
 footer{
 text-align:center;
@@ -204,7 +228,17 @@ color:var(--accent);
 
 <body>
 
+<div class="animated-bg"></div>
+
 <header>
+
+<div class="theme-toggle">
+<select id="theme-select">
+<option value="system">System</option>
+<option value="light">Light</option>
+<option value="dark">Dark</option>
+</select>
+</div>
 
 <h1>Verity Cooper</h1>
 
@@ -217,7 +251,7 @@ color:var(--accent);
 <div class="social-links">
 
 <a href="https://github.com/veritycooper">
-<img src="images/github.png" class="icon">
+<img src="images/cat.png" class="icon">
 </a>
 
 <a href="https://www.linkedin.com/in/verity-cooper/">
@@ -231,16 +265,6 @@ color:var(--accent);
 <a href="https://www.bcs.org/">
 <img src="images/graduation.png" class="icon">
 </a>
-
-</div>
-
-<div class="theme-toggle">
-
-<select id="theme-select">
-<option value="system">System Theme</option>
-<option value="light">Light Mode</option>
-<option value="dark">Dark Mode</option>
-</select>
 
 </div>
 
@@ -288,11 +312,11 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 <div class="tags">
 <span class="tag">Python</span>
 <span class="tag">CLI</span>
-<span class="tag">Random Generator</span>
+<span class="tag">Generator</span>
 </div>
 
 <p>
-<a href="https://github.com/veritycooper/story-prompt-generator">View on GitHub</a>
+<a href="https://github.com/veritycooper">View on GitHub</a>
 </p>
 
 </div>
@@ -323,23 +347,23 @@ Briefcase by Alzam from <a href="https://thenounproject.com/browse/icons/term/br
 
 const select=document.getElementById("theme-select");
 
-function setTheme(theme){
+function applyTheme(theme){
 if(theme==="system"){
 document.documentElement.removeAttribute("data-theme");
 }else{
 document.documentElement.setAttribute("data-theme",theme);
 }
+}
+
+select.addEventListener("change",()=>{
+const theme=select.value;
 localStorage.setItem("theme",theme);
-}
+applyTheme(theme);
+});
 
-select.addEventListener("change",()=>setTheme(select.value));
-
-const savedTheme=localStorage.getItem("theme");
-
-if(savedTheme){
+const savedTheme=localStorage.getItem("theme")||"system";
 select.value=savedTheme;
-setTheme(savedTheme);
-}
+applyTheme(savedTheme);
 
 </script>
 
