@@ -6,164 +6,196 @@
 
 <title>Verity Cooper | Portfolio</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-body {
-font-family: 'Poppins', sans-serif;
-background-color: #faf6fb;
-margin: 0;
-padding: 0;
-color: #333;
+/* ---------------- THEME VARIABLES ---------------- */
+
+:root{
+--bg:#faf6fb;
+--text:#333;
+--card:#ffffff;
+--accent:#d46aa2;
+--tag-bg:#ffe3f1;
+--tag-text:#c85a93;
 }
 
-header {
-background: linear-gradient(135deg, #ffd6e7, #ffe3f1, #f7d6ff);
-padding: 90px 20px 100px 20px;
-text-align: center;
-position: relative;
+[data-theme="dark"]{
+--bg:#1f1f27;
+--text:#f2f2f2;
+--card:#2c2c35;
+--accent:#ff9dc8;
+--tag-bg:#3c2f3a;
+--tag-text:#ffb4d6;
 }
 
-header h1 {
-font-size: 44px;
-font-weight: 500;
-margin-bottom: 0;
+/* ---------------- BASE STYLING ---------------- */
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--bg);
+color:var(--text);
+margin:0;
+padding:0;
+transition:background 0.3s,color 0.3s;
 }
 
-header p {
-font-weight: 300;
-margin-top: 10px;
+/* ---------------- HEADER ---------------- */
+
+header{
+background:linear-gradient(135deg,#ffd6e7,#ffe3f1,#f7d6ff);
+padding:90px 20px 120px 20px;
+text-align:center;
+position:relative;
 }
 
-.name-divider {
-width: 80px;
-height: 4px;
-background: #f3a6c4;
-margin: 14px auto 22px auto;
-border-radius: 3px;
+header h1{
+font-size:44px;
+font-weight:500;
+margin-bottom:0;
 }
 
-/* Social Icons */
-
-.social-links {
-margin-top: 20px;
+header p{
+font-weight:300;
+margin-top:10px;
 }
 
-.social-links a {
-display: inline-block;
-margin: 0 10px;
-font-size: 20px;
-color: #d46aa2;
-transition: transform 0.2s ease;
+.name-divider{
+width:80px;
+height:4px;
+background:#f3a6c4;
+margin:14px auto 22px auto;
+border-radius:3px;
 }
 
-.social-links a:hover {
-transform: translateY(-3px);
+/* ---------------- SOCIAL ICONS ---------------- */
+
+.social-links{
+margin-top:20px;
 }
 
-/* Multi-wave divider */
-
-.wave-divider {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-overflow: hidden;
-line-height: 0;
+.icon{
+width:28px;
+height:28px;
+padding:10px;
+margin:0 8px;
+background:white;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:transform 0.2s,box-shadow 0.2s;
 }
 
-.wave-divider svg {
-display: block;
-width: 100%;
-height: 140px;
+.icon:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* Content sections */
+/* ---------------- THEME SELECTOR ---------------- */
 
-section {
-max-width: 1000px;
-margin: auto;
-padding: 50px 25px;
+.theme-toggle{
+margin-top:25px;
 }
 
-h2 {
-font-weight: 500;
-margin-bottom: 25px;
+.theme-toggle select{
+padding:6px 10px;
+border-radius:8px;
+border:none;
+font-family:'Poppins',sans-serif;
 }
 
-/* Projects Grid */
+/* ---------------- WAVE DIVIDER ---------------- */
 
-.projects-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 25px;
+.wave-divider{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+overflow:hidden;
+line-height:0;
 }
 
-.project {
-background: white;
-padding: 25px;
-border-radius: 12px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-transition: transform 0.2s ease;
+.wave-divider svg{
+width:100%;
+height:140px;
+display:block;
 }
 
-.project:hover {
-transform: translateY(-5px);
+/* ---------------- CONTENT ---------------- */
+
+section{
+max-width:1000px;
+margin:auto;
+padding:50px 25px;
 }
 
-/* Project Tags */
-
-.tags {
-margin-top: 10px;
+h2{
+font-weight:500;
+margin-bottom:25px;
 }
 
-.tag {
-display: inline-block;
-background: #ffe3f1;
-color: #c85a93;
-padding: 4px 10px;
-border-radius: 8px;
-font-size: 12px;
-margin-right: 6px;
+/* ---------------- PROJECT GRID ---------------- */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-/* Links */
-
-a {
-color: #d46aa2;
-text-decoration: none;
-font-weight: 500;
+.project{
+background:var(--card);
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:transform 0.2s;
 }
 
-a:hover {
-text-decoration: underline;
+.project:hover{
+transform:translateY(-5px);
 }
 
-/* Footer */
+/* ---------------- PROJECT TAGS ---------------- */
 
-footer {
-text-align: center;
-padding: 30px;
-color: #888;
-font-size: 14px;
+.tags{
+margin-top:10px;
 }
 
-/* Icons */
-.icon {
-width: 28px;
-height: 28px;
-padding: 10px;
-margin: 0 8px;
-background: white;
-border-radius: 50%;
-box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-transition: transform 0.2s ease, box-shadow 0.2s ease;
+.tag{
+display:inline-block;
+background:var(--tag-bg);
+color:var(--tag-text);
+padding:4px 10px;
+border-radius:8px;
+font-size:12px;
+margin-right:6px;
 }
 
-.icon:hover {
-transform: translateY(-3px);
-box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+/* ---------------- LINKS ---------------- */
+
+a{
+color:var(--accent);
+text-decoration:none;
+font-weight:500;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+text-align:center;
+padding:40px 20px;
+color:#888;
+font-size:14px;
+line-height:1.6;
+}
+
+footer a{
+color:var(--accent);
 }
 
 </style>
@@ -185,7 +217,7 @@ box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 <div class="social-links">
 
 <a href="https://github.com/veritycooper">
-<img src="images/cat.png" class="icon">
+<img src="images/github.png" class="icon">
 </a>
 
 <a href="https://www.linkedin.com/in/verity-cooper/">
@@ -199,6 +231,16 @@ box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 <a href="https://www.bcs.org/">
 <img src="images/graduation.png" class="icon">
 </a>
+
+</div>
+
+<div class="theme-toggle">
+
+<select id="theme-select">
+<option value="system">System Theme</option>
+<option value="light">Light Mode</option>
+<option value="dark">Dark Mode</option>
+</select>
 
 </div>
 
@@ -241,7 +283,7 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 
 <h3>Story Prompt Generator</h3>
 
-<p>A Python program that generates random story prompts based on user-selected genres and tropes.</p>
+<p>A Python program that generates random story prompts based on genre and trope selection.</p>
 
 <div class="tags">
 <span class="tag">Python</span>
@@ -255,30 +297,6 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 
 </div>
 
-<div class="project">
-
-<h3>Future Project</h3>
-
-<p>Additional projects will be added here as the portfolio grows.</p>
-
-<div class="tags">
-<span class="tag">Coming Soon</span>
-</div>
-
-</div>
-
-<div class="project">
-
-<h3>Future Project</h3>
-
-<p>More Python and web development projects will appear here.</p>
-
-<div class="tags">
-<span class="tag">In Progress</span>
-</div>
-
-</div>
-
 </div>
 
 </section>
@@ -287,27 +305,44 @@ I am a final-year BSc (Hons) Information Technology student with interests in cy
 
 <p>© 2026 Verity Cooper</p>
 
-<p style="font-size:12px; max-width:700px; margin:auto; line-height:1.6;">
-Icons used on this site are licensed under CC BY 3.0 from the Noun Project:<br><br>
+<p style="font-size:12px">
 
-GitHub by Guillaume Beaulieu from 
-<a href="https://thenounproject.com/browse/icons/term/github/" target="_blank">The Noun Project</a><br>
+GitHub by Guillaume Beaulieu from <a href="https://thenounproject.com/browse/icons/term/github/" target="_blank">The Noun Project</a><br>
 
-Graduation Cap by Geni Alando from 
-<a href="https://thenounproject.com/browse/icons/term/graduation-cap/" target="_blank">The Noun Project</a><br>
+Graduation Cap by Geni Alando from <a href="https://thenounproject.com/browse/icons/term/graduation-cap/" target="_blank">The Noun Project</a><br>
 
-Mail by Ria Fitriana from 
-<a href="https://thenounproject.com/browse/icons/term/mail/" target="_blank">The Noun Project</a><br>
+Mail by Ria Fitriana from <a href="https://thenounproject.com/browse/icons/term/mail/" target="_blank">The Noun Project</a><br>
 
-Briefcase by Alzam from 
-<a href="https://thenounproject.com/browse/icons/term/briefcase/" target="_blank">The Noun Project</a>
+Briefcase by Alzam from <a href="https://thenounproject.com/browse/icons/term/briefcase/" target="_blank">The Noun Project</a>
 
 </p>
 
 </footer>
 
+<script>
+
+const select=document.getElementById("theme-select");
+
+function setTheme(theme){
+if(theme==="system"){
+document.documentElement.removeAttribute("data-theme");
+}else{
+document.documentElement.setAttribute("data-theme",theme);
+}
+localStorage.setItem("theme",theme);
+}
+
+select.addEventListener("change",()=>setTheme(select.value));
+
+const savedTheme=localStorage.getItem("theme");
+
+if(savedTheme){
+select.value=savedTheme;
+setTheme(savedTheme);
+}
+
+</script>
+
 </body>
 
 </html>
-
-</div>
