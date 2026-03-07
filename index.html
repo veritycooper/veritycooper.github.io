@@ -151,9 +151,13 @@ font-size: 14px;
 
 /* ---------- Particle CSS ---------- */
 #particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
+  z-index: -1;
+  pointer-events: none;
 }
   
 </style>
@@ -237,6 +241,15 @@ d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,256C1120,256,1280,2
         shape: { type: 'circle' },
         opacity: { value: 0.8, random: true },
         size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.5 } },
+        
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#444444",
+          opacity: 0.4,
+          width: 1
+          },
+        
         move: { enable: true, speed: 1, direction: 'none', random: true, out_mode: 'out' }
       },
       retina_detect: true
