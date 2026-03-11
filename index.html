@@ -165,6 +165,31 @@ font-size: 14px;
   z-index: -1;
   pointer-events: none;
 }
+
+  /* ---------- About section layout ---------- */
+
+.about-container {
+display: flex;
+align-items: center;
+gap: 30px;
+}
+
+.profile-photo {
+width: 160px;
+height: 160px;
+border-radius: 50%;
+object-fit: cover;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 700px) {
+
+.about-container {
+flex-direction: column;
+text-align: center;
+}
+
+}
   
 </style>
 
@@ -234,9 +259,15 @@ d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,256C1120,256,1280,2
 
 <h2>About Me</h2> <!-- ---------- about me header ---------- -->
 
+<div class="about-container">
+
+<img src="images/profile.jpg" class="profile-photo">
+  
 <p>
 I am a final-year BSc (Hons) Information Technology student with interests in cybersecurity, digital forensics, and ethical computing. I enjoy building practical software projects and exploring how technology can be used responsibly and securely.
 </p>
+
+</div>
 
 </section>
 
