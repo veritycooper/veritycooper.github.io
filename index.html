@@ -1,434 +1,214 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta name="description" content="Portfolio of Verity Cooper, BSc (Hons) Information Technology student specialising in cybersecurity, digital forensics, and ethical computing.">
-
-<meta name="keywords" content="Verity Cooper, cybersecurity student, digital forensics, IT portfolio, software projects">
-
-<meta name="author" content="Verity Cooper">
-  
-<title>Verity Cooper | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"> <!-- Google Font Import -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script> <!-- Particle Script -->
-
-<style>
-
-body {
-font-family: 'Poppins', sans-serif;
-margin: 0;
-padding: 0;
-color: #333;
-}
-
-header {
-background: linear-gradient(135deg, #ffd6e7, #ffe3f1, #f7d6ff);
-padding: 90px 20px 100px 20px;
-text-align: center;
-position: relative;
-}
-
-header h1 {
-font-size: 44px;
-font-weight: 500;
-margin-bottom: 0;
-}
-
-header p {
-font-weight: 300;
-margin-top: 10px;
-}
-
-.name-divider {
-width: 80px;
-height: 4px;
-background: #f3a6c4;
-margin: 14px auto 22px auto;
-border-radius: 3px;
-}
-
-/* ---------- Social Icons CSS ---------- */
-
-.icon {
-width: 28px;
-height: 28px;
-padding: 10px;
-margin: 0 8px;
-background: white;
-border-radius: 50%;
-box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.icon:hover {
-transform: translateY(-3px);
-box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-}
-
-/* ---------- Multi-wave divider CSS ---------- */
-
-.wave-divider {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-overflow: hidden;
-line-height: 0;
-}
-
-.wave-divider svg {
-display: block;
-width: 100%;
-height: 140px;
-}
-
-/* ---------- Content sections CSS ---------- */
-
-section {
-max-width: 1000px;
-margin: auto;
-padding: 50px 25px;
-}
-
-h2 {
-font-weight: 500;
-margin-bottom: 25px;
-}
-
-/* ---------- Projects Grid CSS ---------- */
-
-.projects-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 25px;
-}
-
-.project {
-background: white;
-padding: 25px;
-border-radius: 12px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-transition: transform 0.2s ease;
-}
-
-.project:hover {
-transform: translateY(-5px);
-}
-
-/* ---------- Project Tags CSS ---------- */
-
-.tags {
-margin-top: 10px;
-}
-
-.tag {
-display: inline-block;
-background: #ffe3f1;
-color: #c85a93;
-padding: 4px 10px;
-border-radius: 8px;
-font-size: 12px;
-margin-right: 6px;
-}
-
-/* ---------- Social Links CSS ---------- */
-
-a {
-color: #d46aa2;
-text-decoration: none;
-font-weight: 500;
-}
-
-a:hover {
-text-decoration: underline;
-}
-
-/* ---------- Footer CSS ---------- */
-
-footer {
-text-align: center;
-padding: 30px;
-color: #888;
-font-size: 14px;
-}
-
-/* ---------- Particle CSS ---------- */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-  /* ---------- About section layout ---------- */
-
-.about-container {
-display: flex;
-align-items: center;
-gap: 30px;
-}
-
-.profile-photo {
-width: 160px;
-height: 160px;
-border-radius: 50%;
-object-fit: cover;
-border: 4px solid #ffe3f1;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 700px) {
-
-.about-container {
-flex-direction: column;
-text-align: center;
-}
-
-}
-  
-</style>
-
-</head>
-
-<!-- ---------- HEADER START ---------- -->
-  
-<body>
-
-<!-- Particle Background Start -->
-<div id="particles-js"></div>
-
-
-<header>
-
-<h1>Verity Cooper</h1> <!-- ---------- my name ---------- -->
-
-<div class="name-divider"></div> <!-- ---------- the little pink line ---------- -->
-
-<p>BSc (Hons) Information Technology Student</p> <!-- ---------- what i am  / my "role" ---------- --> 
-
-<p>Cybersecurity • Digital Forensics • Software Projects • AI Ethics</p> <!-- ---------- what i'm interested in ---------- -->
-
-<div class="social-links"> <!-- ---------- container for social links ---------- -->
-
-<a href="https://github.com/veritycooper"> <!-- ---------- my github account ---------- -->
-<img src="images/cat.png" class="icon" title="Github Profile"> <!-- ---------- the github icon ---------- -->
-</a>
-
-<a href="https://www.linkedin.com/in/verity-cooper/"> <!-- ---------- my linkedin account ---------- -->
-<img src="images/briefcase.png" class="icon" title="LinkedIn Profile"> <!-- ---------- the linkedin icon ---------- -->
-</a>
-
-<a href="mailto:verity.cooper24@gmail.com"> <!-- ---------- my email address ---------- -->
-<img src="images/mail.png" class="icon" title="Email Address"> <!-- ---------- the email icon ---------- -->
-</a>
-
-<a href="https://www.bcs.org/"> <!-- ---------- my bcs account ---------- -->
-<img src="images/graduation.png" class="icon" title="Download CV"> <!-- ---------- the bcs icon ---------- -->
-</a>
-
-</div>
-
-<!-- ---------- WAVE DIVIDER START ---------- -->
-<div class="wave-divider">
-
-<svg viewBox="0 0 1440 320" preserveAspectRatio="none"> <!-- ---------- position and dimension of wave divider ---------- -->
-
-<path fill="#f8e4f0" fill-opacity="0.7"
-d="M0,224L60,213.3C120,203,240,181,360,186.7C480,192,600,224,720,229.3C840,235,960,213,1080,197.3C1200,181,1320,171,1380,165.3L1440,160L1440,320L0,320Z"></path>
-
-<path fill="#f3d3e6" fill-opacity="0.6"
-d="M0,256L60,240C120,224,240,192,360,186.7C480,181,600,203,720,208C840,213,960,203,1080,197.3C1200,192,1320,192,1380,192L1440,192L1440,320L0,320Z"></path>
-
-<path fill="#ffffff"
-d="M0,288L80,272C160,256,320,224,480,224C640,224,800,256,960,256C1120,256,1280,224,1360,208L1440,192L1440,320L0,320Z"></path>
-
-</svg>
-
-</div>
-
-</header>
-
-
-<!-- ---------- MAIN CONTENT START ---------- -->
-<section>
-
-<h2>About Me</h2> <!-- ---------- about me header ---------- -->
-
-<div class="about-container">
-
-<img src="images/profile picture.jpg" class="profile-photo">
-  
-<p>
-I am a final-year BSc (Hons) Information Technology student with interests in cybersecurity, digital forensics, and ethical computing. I enjoy building practical software projects and exploring how technology can be used responsibly and securely. <br> <br> I am also a student member of the British Computer Society (BCS), and I balance my academic work with part-time employment, which has strengthened my time management and organisational skills.
-
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Projects</h2>
-
-<div class="projects-grid"> <!-- ---------- 3 card layout call ---------- -->
-
-<div class="project"> <!-- ---------- card 1 ---------- -->
-
-<h3>Story Prompt Generator</h3>
-
-<p>A Python program that generates random story prompts based on user-selected genres and tropes.</p>
-
-<div class="tags"> <!-- ---------- technical snippet of the project ---------- -->
-<span class="tag">Python</span>
-<span class="tag">CLI</span>
-<span class="tag">Random Generator</span>
-</div>
-
-<p>
-<a href="https://github.com/veritycooper/story-prompt-generator">View on GitHub</a> <!-- ---------- link to project ---------- -->
-</p>
-
-</div>
-
-<div class="project"> <!-- ---------- card 2 ---------- -->
-
-<h3>Future Project</h3> <!-- ---------- undetermined ---------- -->
-
-<p>Additional projects will be added here as the portfolio grows.</p>
-
-<div class="tags"> <!-- ---------- technical snippet of code ---------- -->
-<span class="tag">Coming Soon</span>
-</div>
-
-</div>
-
-<div class="project"> <!-- ---------- card 3 ---------- -->
-
-<h3>Future Project</h3> <!-- ---------- undetermined ---------- -->
-
-<p>More Python and web development projects will appear here.</p>
-
-<div class="tags"> <!-- ---------- technical snippet of code ---------- -->
-<span class="tag">In Progress</span>
-</div>
-
-</div>
-
-</div>
-
-<p>
-<a href="https://github.com/veritycooper">
-View more projects on GitHub →
-</a>
-</p>
-</section>
-
-  <!-- ---------- technical skills section ---------- -->
-<section>
-
-<h2>Technical Skills</h2>
-
-<div class="tags">
-
-<span class="tag">Python</span>
-<span class="tag">HTML</span>
-<span class="tag">CSS</span>
-<span class="tag">Git</span>
-<span class="tag">Linux</span>
-<span class="tag">Digital Forensics</span>
-<span class="tag">Cybersecurity Fundamentals</span>
-<span class="tag">CLI Tools</span>
-
-</div>
-
-</section>
-
-<!-- ---------- education section ---------- -->
-<section>
-
-<h2>Education</h2>
-
-<p><strong>BSc (Hons) Information Technology</strong></p>
-
-<p>
-University of the West of England<br>
-Expected Graduation: 2026
-</p>
-
-<div class="tags">
-
-<span class="tag">Cybersecurity</span>
-<span class="tag">Digital Forensics</span>
-<span class="tag">Ethical Computing</span>
-<span class="tag">Software Development</span>
-
-</div>
-
-</section>
-
-
-  <!-- ---------- START OF FOOTER - NO CHANGES AFTER THIS POINT ---------- -->
-<footer>
-
-<p>© 2026 Verity Cooper</p> <!-- ---------- my little copyright ---------- -->
-
-<p style="font-size:12px; max-width:700px; margin:auto; line-height:1.6;">
-Icons used on this site are licensed under CC BY 3.0 from the Noun Project:<br><br>
-
-GitHub by Guillaume Beaulieu from 
-<a href="https://thenounproject.com/browse/icons/term/github/" target="_blank">The Noun Project</a><br> <!-- ---------- credit for the cat ---------- -->
-
-Graduation Cap by Geni Alando from 
-<a href="https://thenounproject.com/browse/icons/term/graduation-cap/" target="_blank">The Noun Project</a><br> <!-- ---------- credit for the hat ---------- -->
-
-Mail by Ria Fitriana from 
-<a href="https://thenounproject.com/browse/icons/term/mail/" target="_blank">The Noun Project</a><br> <!-- ---------- credit for the mail ---------- -->
-
-Briefcase by Alzam from 
-<a href="https://thenounproject.com/browse/icons/term/briefcase/" target="_blank">The Noun Project</a> <!-- ---------- credit for the briefcase ---------- -->
-
-</p>
-
-</footer>
-
-  <script>
-    document.addEventListener('dblclick', () => {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-      } else {
-        document.exitFullscreen();
-      }
-    });
-
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 100 },
-        color: { value: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'] },
-        shape: { type: 'circle' },
-        opacity: { value: 0.8, random: true },
-        size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.5 } },
-        
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#444444",
-          opacity: 0.4,
-          width: 1
-          },
-        
-        move: { enable: true, speed: 1, direction: 'none', random: true, out_mode: 'out' }
-      },
-      retina_detect: true
-    });
-  </script>
-  
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio for Verity Cooper, an Information Technology graduate focused on cybersecurity, digital forensics, software projects, and ethical computing."
+    />
+    <title>Verity Cooper | IT Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="#top">VC</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-content">
+          <p class="eyebrow">Cybersecurity • Digital Forensics • Ethical Computing</p>
+          <h1>Hi, I’m Verity Cooper.</h1>
+          <p class="hero-text">
+            I’m an Information Technology graduate awaiting final results, with a
+            strong interest in building secure, practical tools and investigating
+            how technology can be used responsibly.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Portfolio highlights">
+          <span class="card-label">Current Focus</span>
+          <h2>Graduate IT Portfolio</h2>
+          <p>
+            Practical software projects, digital forensics coursework, and
+            cybersecurity learning presented in one place.
+          </p>
+          <ul>
+            <li>Final-year BSc (Hons) IT completed</li>
+            <li>First-class marks in most completed assignments</li>
+            <li>Student member of the British Computer Society</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="about" class="section split-section">
+        <div>
+          <p class="eyebrow">About Me</p>
+          <h2>Curious, organised, and security-minded.</h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            I have recently completed my BSc (Hons) Information Technology at the
+            University of the West of England and am awaiting my final results.
+            My academic work has focused on software development, cybersecurity,
+            digital forensics, and ethical computing.
+          </p>
+          <p>
+            Alongside university, I have balanced part-time employment, which has
+            strengthened my time management, communication, and organisation. I’m
+            now developing my portfolio to show practical projects, technical
+            growth, and my interest in secure and responsible technology.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects</h2>
+          <p>
+            A growing collection of software and cybersecurity-related projects.
+            Links can be updated once each repository or demo is ready.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-topline">
+              <span class="tag">Digital Forensics</span>
+              <span class="status">Placeholder</span>
+            </div>
+            <h3>MetaTrace</h3>
+            <p>
+              A planned digital forensics toolkit concept for managing cases,
+              evidence, analysis workflows, timelines, reports, and logs.
+            </p>
+            <ul class="project-points">
+              <li>Case dashboard and investigation progress concept</li>
+              <li>Evidence management and analysis workflow placeholder</li>
+              <li>Designed around clear, investigator-friendly navigation</li>
+            </ul>
+            <a href="#" aria-label="MetaTrace project link coming soon">Coming soon</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">Python</span>
+              <span class="status">Completed</span>
+            </div>
+            <h3>Story Prompt Generator</h3>
+            <p>
+              A Python command-line program that generates random story prompts
+              based on selected genres and tropes.
+            </p>
+            <ul class="project-points">
+              <li>Practised Python control flow and user input handling</li>
+              <li>Created reusable prompt-building logic</li>
+              <li>Built as a simple, practical CLI project</li>
+            </ul>
+            <a href="#">Add GitHub link</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">Portfolio</span>
+              <span class="status">In Progress</span>
+            </div>
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              This portfolio site, designed to present technical skills,
+              academic background, and project work in a clean GitHub Pages
+              format.
+            </p>
+            <ul class="project-points">
+              <li>Built with HTML and CSS</li>
+              <li>Responsive layout for mobile and desktop</li>
+              <li>Ready to publish through GitHub Pages</li>
+            </ul>
+            <a href="#">Add repository link</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills-section">
+        <div class="section-heading">
+          <p class="eyebrow">Technical Skills</p>
+          <h2>Tools and Areas of Interest</h2>
+        </div>
+        <div class="skills-grid">
+          <div>
+            <h3>Programming</h3>
+            <p>Python, HTML, CSS, Git, command-line tools</p>
+          </div>
+          <div>
+            <h3>Security</h3>
+            <p>Cybersecurity fundamentals, digital forensics, ethical computing</p>
+          </div>
+          <div>
+            <h3>Systems</h3>
+            <p>Linux basics, file systems, investigation workflows, documentation</p>
+          </div>
+          <div>
+            <h3>Professional</h3>
+            <p>Organisation, time management, communication, independent learning</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education-section">
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2>BSc (Hons) Information Technology</h2>
+          <p>University of the West of England</p>
+        </div>
+        <div class="education-card">
+          <h3>Recently completed, awaiting final results</h3>
+          <p>
+            Achieved First-class marks in the majority of completed assignments,
+            with one further completed assignment marked at 66.4%. Final
+            classification is pending.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s connect.</h2>
+          <p>
+            I’m interested in graduate technology roles, cybersecurity learning
+            opportunities, and projects that combine practical software with
+            responsible computing.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/veritycooper">GitHub</a>
+          <a href="mailto:your.email@example.com">Email</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Verity Cooper. Built for GitHub Pages.</p>
+    </footer>
+  </body>
 </html>
