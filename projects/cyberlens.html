@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CyberLens is an interactive cybersecurity education experience for visual, playful exploration of digital safety concepts."
+    />
+    <title>CyberLens | Verity Cooper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../cyberlens.css?v=7" />
+  </head>
+  <body class="cyberlens-page">
+    <header class="site-header cyberlens-header">
+      <nav class="nav cyberlens-nav" aria-label="CyberLens navigation">
+        <a class="logo cyberlens-logo" href="../index.html#projects">CL</a>
+        <div class="nav-links">
+          <a href="#explore">Explore</a>
+          <a href="#passwords">Passwords</a>
+          <a href="#hashing">Hashing</a>
+          <a href="#scenarios">Scenarios</a>
+          <a href="#settings">Settings</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="explore" class="section lens-hero">
+        <div class="lens-hero-copy">
+          <a class="back-link" href="../index.html#projects">Back to projects</a>
+          <p class="eyebrow">Interactive Cybersecurity Museum</p>
+          <h1>Explore digital safety through playful visual exhibits.</h1>
+          <p class="hero-text">
+            CyberLens turns cybersecurity ideas into tactile experiments: adjust
+            a password, change a hash, spot a suspicious link, and watch data
+            move through everyday digital spaces.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary lens-button" href="#passwords">
+              Start exploring
+            </a>
+            <a class="button secondary lens-secondary" href="#gallery">
+              View exhibits
+            </a>
+          </div>
+        </div>
+
+        <aside class="museum-card" aria-label="Animated museum preview">
+          <div class="orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="card-label">Today’s Exhibit</p>
+          <h2>What happens when one character changes?</h2>
+          <p>
+            Try the hashing sandbox to see how a tiny edit creates a completely
+            different digital fingerprint.
+          </p>
+          <div class="mini-hash-preview" aria-hidden="true">
+            <span>hello</span>
+            <span>2cf24d...</span>
+            <span>hello!</span>
+            <span>ce0609...</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Explore Concepts</p>
+          <h2>A collection of interactive exhibits.</h2>
+          <p>
+            Each card is a small experiment designed to make one security idea
+            visible within a few minutes.
+          </p>
+        </div>
+        <div class="exhibit-grid">
+          <a class="exhibit-card" href="cyberlens-exhibit.html?topic=passwords">
+            <span class="exhibit-icon">Aa</span>
+            <h3>Password Playground</h3>
+            <p>See how length, patterns, and repetition affect strength.</p>
+          </a>
+          <a class="exhibit-card" href="cyberlens-exhibit.html?topic=hashing">
+            <span class="exhibit-icon">#</span>
+            <h3>Hashing Sandbox</h3>
+            <p>Change one character and watch the fingerprint transform.</p>
+          </a>
+          <a class="exhibit-card" href="cyberlens-exhibit.html?topic=encryption">
+            <span class="exhibit-icon">Key</span>
+            <h3>Encryption Visualiser</h3>
+            <p>Turn readable text into protected ciphertext and back again.</p>
+          </a>
+          <a class="exhibit-card" href="cyberlens-exhibit.html?topic=phishing">
+            <span class="exhibit-icon">?</span>
+            <h3>Phishing Spotter</h3>
+            <p>Tap subtle clues inside a suspicious email comparison.</p>
+          </a>
+          <a class="exhibit-card" href="cyberlens-exhibit.html?topic=wifi">
+            <span class="exhibit-icon">Wi</span>
+            <h3>Public WiFi Simulator</h3>
+            <p>Compare exposed and protected traffic in a café scene.</p>
+          </a>
+          <a class="exhibit-card" href="cyberlens-exhibit.html?topic=footprint">
+            <span class="exhibit-icon">Map</span>
+            <h3>Digital Footprint Explorer</h3>
+            <p>Reveal how everyday data points connect across platforms.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="passwords" class="section exhibit-section">
+        <div class="exhibit-intro">
+          <p class="eyebrow">Password Playground</p>
+          <h2>Build a password and watch its shape change.</h2>
+          <p>
+            Longer, less predictable passwords create a bigger search space for
+            attackers.
+          </p>
+          <a class="detail-link" href="cyberlens-exhibit.html?topic=passwords">
+            Open deeper exhibit
+          </a>
+        </div>
+        <div class="interactive-panel password-lab">
+          <div>
+            <label class="lens-label" for="password-input">Try a password</label>
+            <input
+              id="password-input"
+              class="lens-input"
+              type="text"
+              value="sunflower-river-42"
+              autocomplete="off"
+            />
+            <div class="strength-meter" aria-hidden="true">
+              <span id="strength-fill"></span>
+            </div>
+            <p id="password-summary" class="result-copy" aria-live="polite"></p>
+          </div>
+          <div class="pattern-board" aria-label="Password pattern indicators">
+            <div><strong id="length-score">0</strong><span>characters</span></div>
+            <div><strong id="variety-score">0</strong><span>character types</span></div>
+            <div><strong id="pattern-score">0</strong><span>patterns noticed</span></div>
+          </div>
+          <div>
+            <p class="visual-caption">
+              Password ingredients: each tile shows whether the password uses
+              lowercase letters, uppercase letters, numbers, or symbols.
+            </p>
+            <div class="password-breakdown" id="password-breakdown" aria-hidden="true"></div>
+            <div class="password-legend" aria-hidden="true">
+              <span class="lower">lowercase</span>
+              <span class="upper">uppercase</span>
+              <span class="number">numbers</span>
+              <span class="symbol">symbols / spaces</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hashing" class="section exhibit-section">
+        <div class="exhibit-intro">
+          <p class="eyebrow">Hashing Sandbox</p>
+          <h2>A tiny change creates a new fingerprint.</h2>
+          <p>
+            Hashes are one-way fingerprints used to check whether data stayed
+            the same.
+          </p>
+          <a class="detail-link" href="cyberlens-exhibit.html?topic=hashing">
+            Open deeper exhibit
+          </a>
+        </div>
+        <div class="interactive-panel hash-lab">
+          <div>
+            <label class="lens-label" for="hash-a">Original text</label>
+            <input id="hash-a" class="lens-input" value="hello" />
+            <code id="hash-a-output" class="hash-output"></code>
+          </div>
+          <div>
+            <label class="lens-label" for="hash-b">Changed text</label>
+            <input id="hash-b" class="lens-input" value="hello!" />
+            <code id="hash-b-output" class="hash-output"></code>
+          </div>
+          <div class="avalanche-card">
+            <span id="avalanche-score">0%</span>
+            <p>of visible hash characters changed</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="encryption" class="section exhibit-section">
+        <div class="exhibit-intro">
+          <p class="eyebrow">Encryption Visualiser</p>
+          <h2>Lock a message, then unlock it with the same key.</h2>
+          <p>
+            This simple simulation shifts letters to show the basic idea of
+            transforming readable text into protected text.
+          </p>
+          <a class="detail-link" href="cyberlens-exhibit.html?topic=encryption">
+            Open deeper exhibit
+          </a>
+        </div>
+        <div class="interactive-panel encryption-lab">
+          <div>
+            <label class="lens-label" for="plain-text">Plaintext</label>
+            <textarea id="plain-text" class="lens-input lens-textarea">Meet at the library after lunch.</textarea>
+          </div>
+          <div class="key-control">
+            <label class="lens-label" for="key-slider">Key strength</label>
+            <input id="key-slider" type="range" min="1" max="25" value="7" />
+            <strong id="key-value">7</strong>
+          </div>
+          <div>
+            <span class="lens-label">Ciphertext</span>
+            <p id="cipher-output" class="cipher-output" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="phishing" class="section exhibit-section">
+        <div class="exhibit-intro">
+          <p class="eyebrow">Phishing Spotter</p>
+          <h2>Notice the clues before clicking.</h2>
+          <p>
+            This exhibit is about pattern recognition, not automatic detection.
+            Select the highlighted clues to learn what they mean.
+          </p>
+          <a class="detail-link" href="cyberlens-exhibit.html?topic=phishing">
+            Open deeper exhibit
+          </a>
+        </div>
+        <div class="interactive-panel phishing-lab">
+          <article class="email-card">
+            <p>
+              <strong>From:</strong> Account Support &lt;<button
+                class="clue"
+                data-clue="sender"
+              >help@secure-login.example</button>&gt;
+            </p>
+            <p>
+              <button class="clue" data-clue="greeting">Hello customer</button>,
+            </p>
+            <p>
+              Your account will be
+              <button class="clue" data-clue="threat">closed today</button>
+              unless you
+              <button class="clue" data-clue="urgency">verify immediately</button>.
+            </p>
+            <p>
+              Visit
+              <button class="clue" data-clue="link">secure-login.example/update</button>
+              to keep access.
+            </p>
+          </article>
+          <aside class="clue-panel" aria-live="polite">
+            <h3 id="clue-title">Tap a clue</h3>
+            <p id="clue-copy">
+              Explore the email by selecting a suspicious phrase or link.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="wifi" class="section exhibit-section">
+        <div class="exhibit-intro">
+          <p class="eyebrow">Public WiFi Simulator</p>
+          <h2>Watch data move through a café network.</h2>
+          <p>
+            Switch between insecure and protected browsing to see what changes.
+          </p>
+          <a class="detail-link" href="cyberlens-exhibit.html?topic=wifi">
+            Open deeper exhibit
+          </a>
+        </div>
+        <div class="interactive-panel wifi-lab">
+          <button id="wifi-toggle" class="button secondary lens-secondary" type="button">
+            Toggle HTTPS protection
+          </button>
+          <div class="wifi-scene" aria-live="polite">
+            <div class="device">You</div>
+            <div class="data-path" id="data-path"><span></span><span></span><span></span></div>
+            <div class="device">Website</div>
+            <div class="observer" id="observer">Observer sees: passwords and pages</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="footprint" class="section exhibit-section">
+        <div class="exhibit-intro">
+          <p class="eyebrow">Digital Footprint Explorer</p>
+          <h2>Reveal how small data points connect.</h2>
+          <p>
+            Toggle everyday behaviours to see how a profile can become more
+            detailed over time.
+          </p>
+          <a class="detail-link" href="cyberlens-exhibit.html?topic=footprint">
+            Open deeper exhibit
+          </a>
+        </div>
+        <div class="interactive-panel footprint-lab">
+          <div class="toggle-list">
+            <label><input type="checkbox" data-footprint="location" checked /> Location sharing</label>
+            <label><input type="checkbox" data-footprint="cookies" checked /> Advertising cookies</label>
+            <label><input type="checkbox" data-footprint="social" /> Public social posts</label>
+            <label><input type="checkbox" data-footprint="shopping" /> Shopping history</label>
+          </div>
+          <div id="footprint-map" class="footprint-map" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="scenarios" class="section exhibit-section">
+        <div class="exhibit-intro">
+          <p class="eyebrow">Social Engineering Scenarios</p>
+          <h2>Choose a response in a low-pressure story.</h2>
+          <p>
+            Social engineering often uses helpfulness, urgency, or authority.
+            Try a response and see the safer pattern.
+          </p>
+          <a class="detail-link" href="cyberlens-exhibit.html?topic=scenarios">
+            Open deeper exhibit
+          </a>
+        </div>
+        <div class="interactive-panel scenario-lab">
+          <article>
+            <h3>“Hi, this is IT support. Can you read out your login code?”</h3>
+            <div class="scenario-actions">
+              <button data-response="share" type="button">Share the code</button>
+              <button data-response="verify" type="button">Verify through official IT</button>
+              <button data-response="ignore" type="button">Hang up without reporting</button>
+            </div>
+          </article>
+          <aside>
+            <h3 id="scenario-title">Choose a response</h3>
+            <p id="scenario-copy">
+              CyberLens will explain the manipulation technique and a safer next step.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="settings" class="section settings-exhibit">
+        <div>
+          <p class="eyebrow">Accessibility & Settings</p>
+          <h2>Make the museum calmer.</h2>
+          <p>
+            These preferences adjust the local page only, keeping the experience
+            comfortable for different learners.
+          </p>
+        </div>
+        <div class="settings-card">
+          <label>
+            <input id="reduce-motion" type="checkbox" />
+            Reduce decorative motion
+          </label>
+          <label>
+            <input id="high-contrast" type="checkbox" />
+            Increase contrast
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Verity Cooper. CyberLens interactive concept for GitHub Pages.</p>
+    </footer>
+    <script src="../cyberlens.js?v=6"></script>
+  </body>
+</html>
