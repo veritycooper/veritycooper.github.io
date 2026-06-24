@@ -47,6 +47,16 @@
               <span>Live on GitHub Pages</span>
               <span>HTML · CSS · JavaScript</span>
             </div>
+            <div class="detail-actions">
+              <a
+                class="button primary"
+                href="https://veritycooper.github.io/cyberlens/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Launch CyberLens
+              </a>
+            </div>
           </div>
           <figure class="case-study-hero-shot">
             <img
@@ -135,33 +145,6 @@
             </li>
           </ul>
         </article>
-
-        <div class="source-card case-study-actions">
-          <div class="case-study-actions-copy">
-            <h3>Try it yourself</h3>
-            <p>
-              Open the live prototype and explore the exhibits in your browser.
-            </p>
-          </div>
-          <div class="sidebar-actions">
-            <a
-              class="button primary"
-              href="https://veritycooper.github.io/cyberlens/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Launch CyberLens
-            </a>
-            <a
-              class="button secondary"
-              href="https://github.com/veritycooper/cyberlens"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
 
         <div class="case-study-walkthrough">
           <p class="eyebrow showcase-eyebrow">Prototype walkthrough</p>
@@ -448,56 +431,59 @@
         </section>
 
         <article class="project-detail-card case-study-accessibility">
-          <div class="case-study-split-card">
-            <div class="case-study-split-copy">
-              <p class="eyebrow">Inclusive design</p>
-              <h2>Accessibility &amp; settings</h2>
-              <p>
-                CyberLens is meant to feel welcoming to different learners, not
-                only people comfortable with fast motion and low-contrast UI. The
-                settings panel adjusts the local page only — no account, no
-                server, and no tracking.
-              </p>
-              <ul class="project-points">
-                <li>
-                  <strong>Reduce decorative motion</strong> — slows or removes
-                  ambient orbit animations and other non-essential movement for
-                  visitors who prefer a calmer screen.
-                </li>
-                <li>
-                  <strong>Increase contrast</strong> — strengthens text, borders,
-                  and focus states so exhibits remain readable in brighter rooms
-                  or for users who need sharper visual separation.
-                </li>
-                <li>
-                  <strong>Plain-language labels</strong> — exhibit copy avoids
-                  acronyms where possible; when terms like HTTPS or VPN appear on
-                  deep-dive pages, they are spelled out inline.
-                </li>
-                <li>
-                  <strong>Keyboard-friendly structure</strong> — exhibits use
-                  semantic headings, buttons, and form controls so interactions
-                  stay usable without relying on precise mouse work alone.
-                </li>
-              </ul>
-              <p>
-                <a
-                  href="https://veritycooper.github.io/cyberlens/#settings"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Try accessibility settings on the live site</a
-                >
-              </p>
-            </div>
-
-            <figure class="case-study-inline-shot">
-              <img
-                src="../images/cyberlens/accessibility-settings.png"
-                alt="CyberLens accessibility settings with reduce motion and increase contrast toggles"
-              />
-              <figcaption>Settings stay on the device — preferences are not sent anywhere.</figcaption>
-            </figure>
+          <div class="case-study-accessibility-intro">
+            <p class="eyebrow">Inclusive design</p>
+            <h2>Accessibility &amp; settings</h2>
+            <p>
+              CyberLens is meant to feel welcoming to different learners, not
+              only people comfortable with fast motion and low-contrast UI. The
+              settings panel adjusts the local page only — no account, no server,
+              and no tracking.
+            </p>
           </div>
+
+          <div class="case-study-accessibility-details">
+            <ul class="project-points">
+              <li>
+                <strong>Reduce decorative motion</strong> — slows or removes
+                ambient orbit animations and other non-essential movement for
+                visitors who prefer a calmer screen.
+              </li>
+              <li>
+                <strong>Increase contrast</strong> — strengthens text, borders,
+                and focus states so exhibits remain readable in brighter rooms
+                or for users who need sharper visual separation.
+              </li>
+              <li>
+                <strong>Plain-language labels</strong> — exhibit copy avoids
+                acronyms where possible; when terms like HTTPS or VPN appear on
+                deep-dive pages, they are spelled out inline.
+              </li>
+              <li>
+                <strong>Keyboard-friendly structure</strong> — exhibits use
+                semantic headings, buttons, and form controls so interactions
+                stay usable without relying on precise mouse work alone.
+              </li>
+            </ul>
+            <p>
+              <a
+                href="https://veritycooper.github.io/cyberlens/#settings"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Try accessibility settings on the live site</a
+              >
+            </p>
+          </div>
+
+          <figure class="case-study-accessibility-shot">
+            <img
+              src="../images/cyberlens/accessibility-settings.png"
+              alt="CyberLens accessibility settings with reduce motion and increase contrast toggles"
+            />
+            <figcaption>
+              Settings stay on the device — preferences are not sent anywhere.
+            </figcaption>
+          </figure>
         </article>
 
         <article class="project-detail-card case-study-notes">
@@ -537,7 +523,16 @@
             <li>Hosted on GitHub Pages from the <code>main</code> branch</li>
             <li>No API keys, databases, or server-side rendering</li>
             <li>Accessibility preferences stored with <code>localStorage</code></li>
-            <li>Repository includes setup and deployment notes in the README</li>
+            <li>
+              Repository and source on
+              <a
+                href="https://github.com/veritycooper/cyberlens"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+              with setup and deployment notes in the README
+            </li>
           </ul>
         </article>
 
