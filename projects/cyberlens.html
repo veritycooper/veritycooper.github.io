@@ -42,9 +42,10 @@
               and more without dense jargon.
             </p>
             <div class="detail-meta" aria-label="Project summary">
-              <span>Live prototype</span>
-              <span>Accessible education</span>
-              <span>HTML · CSS · JS</span>
+              <span>Solo prototype · 2026</span>
+              <span>Designed &amp; built end-to-end</span>
+              <span>Live on GitHub Pages</span>
+              <span>HTML · CSS · JavaScript</span>
             </div>
           </div>
           <figure class="case-study-hero-shot">
@@ -57,33 +58,123 @@
       </section>
 
       <section class="section case-study-body">
-        <div class="case-study-main">
-          <article class="project-detail-card case-study-overview">
-            <h2>Overview</h2>
-            <p>
-              Cyber security can feel overwhelming when it is taught through dense
-              terminology. CyberLens makes core ideas tangible: adjust a password
-              and watch strength change, edit one character and see a hash
-              transform, or tap clues in a suspicious message to understand
-              phishing patterns.
-            </p>
-            <p>
-              I built it to combine security, user experience, accessibility, and
-              educational design — helping people feel more confident online
-              through exploration rather than fear. The prototype runs entirely
-              on GitHub Pages with vanilla HTML, CSS, and JavaScript.
-            </p>
-          </article>
+        <article class="project-detail-card case-study-overview">
+          <h2>Overview</h2>
+          <p>
+            Cyber security can feel overwhelming when it is taught through dense
+            terminology. CyberLens makes core ideas tangible: adjust a password
+            and watch strength change, edit one character and see a hash
+            transform, or tap clues in a suspicious message to understand
+            phishing patterns.
+          </p>
+          <p>
+            I built it to combine security, user experience, accessibility, and
+            educational design — helping people feel more confident online
+            through exploration rather than fear. The prototype runs entirely
+            on GitHub Pages with vanilla HTML, CSS, and JavaScript.
+          </p>
+        </article>
 
-          <section class="showcase-section" aria-labelledby="showcase-heading">
-            <div class="showcase-heading">
-              <p class="eyebrow">Prototype walkthrough</p>
+        <article class="project-detail-card">
+          <h2>Why I built it</h2>
+          <p>
+            Cyber security is often taught through dense terminology, alarm-heavy
+            messaging, or course-style modules that assume prior knowledge. I
+            wanted something different for everyday users — especially people
+            with little technical background who still need practical online
+            safety skills.
+          </p>
+          <p>
+            CyberLens is aimed at curious beginners: students, career changers,
+            or anyone who has heard words like “phishing” and “encryption” but
+            never had a calm space to explore what they actually mean. The goal
+            is confidence through understanding, not fear through jargon.
+          </p>
+        </article>
+
+        <article class="project-detail-card">
+          <h2>Design process</h2>
+          <p>
+            The first version felt too much like a traditional course — linear
+            sections, lots of reading upfront, and a tone that still sounded
+            like a textbook. I reframed the project around a science-museum
+            metaphor: short exhibits, hands-on panels first, and optional deeper
+            reading for visitors who want more.
+          </p>
+          <p>
+            Each exhibit went through a similar loop: pick one core idea, build
+            a simple interaction, write plain-language copy, then add Museum
+            Notes and Level Up content only where extra explanation helped. I
+            kept removing features that felt clever but distracting, favouring
+            clarity over completeness.
+          </p>
+        </article>
+
+        <article class="project-detail-card">
+          <h2>Challenges &amp; tradeoffs</h2>
+          <ul class="project-points">
+            <li>
+              <strong>Simplifying without misleading.</strong> Hashing and
+              encryption demos are educational sketches, not production
+              cryptography — I had to balance accuracy with approachability.
+            </li>
+            <li>
+              <strong>Static-site constraints.</strong> Everything runs in the
+              browser on GitHub Pages, so there is no backend, account system,
+              or saved progress — preferences stay local to each device.
+            </li>
+            <li>
+              <strong>Calm vs. urgent.</strong> Security tools often lean on
+              fear; I chose softer visuals and curiosity-driven copy, which
+              meant being careful not to underplay real risks.
+            </li>
+            <li>
+              <strong>Scope control.</strong> Seven exhibits is already a lot
+              for a solo prototype; deep-dive pages share one template to keep
+              the codebase maintainable.
+            </li>
+          </ul>
+        </article>
+
+        <div class="source-card case-study-actions">
+          <div class="case-study-actions-copy">
+            <h3>Try it yourself</h3>
+            <p>
+              Open the live prototype and explore the exhibits in your browser.
+            </p>
+          </div>
+          <div class="sidebar-actions">
+            <a
+              class="button primary"
+              href="https://veritycooper.github.io/cyberlens/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Launch CyberLens
+            </a>
+            <a
+              class="button secondary"
+              href="https://github.com/veritycooper/cyberlens"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="case-study-walkthrough">
+          <p class="eyebrow showcase-eyebrow">Prototype walkthrough</p>
+
+          <div class="case-study-split">
+          <div class="case-study-showcase">
+            <header class="showcase-heading">
               <h2 id="showcase-heading">See it in action</h2>
               <p>
-                Screenshots from the live build — interactive exhibits, deeper
-                learning pages, and accessibility options.
+                Screenshots from the live build — deep dives, Level Up notes,
+                Museum Notes, and how exhibits connect across the site.
               </p>
-            </div>
+            </header>
 
             <div class="showcase-list">
               <figure class="showcase-item">
@@ -130,80 +221,395 @@
                   Jargon-free takeaways visitors can remember after each exhibit.
                 </figcaption>
               </figure>
-
-              <figure class="showcase-item">
-                <img
-                  src="../images/cyberlens/accessibility-settings.png"
-                  alt="Accessibility and settings panel with reduced motion and contrast options"
-                />
-                <figcaption>
-                  <strong>Accessibility</strong>
-                  Reduced motion and higher contrast for a calmer experience.
-                </figcaption>
-              </figure>
             </div>
-          </section>
+          </div>
 
-          <article class="project-detail-card case-study-notes">
-            <h2>Technical notes</h2>
-            <ul class="project-points">
-              <li>Client-side interactivity — no build step or backend</li>
-              <li>Main lobby and inline exhibits on <code>index.html</code></li>
-              <li>Deeper dives via <code>exhibit.html?topic=...</code></li>
-              <li>Source and deployment docs in the dedicated repository</li>
-            </ul>
-          </article>
+          <aside class="case-study-context" aria-labelledby="showcase-heading">
+            <div class="source-card context-card">
+              <h3>Exhibits</h3>
+              <p class="context-intro">
+                Seven interactive panels on the main site, each focused on one
+                security idea with a matching deep-dive page.
+              </p>
+              <dl class="context-detail-list">
+                <div>
+                  <dt>
+                    <a
+                      href="https://veritycooper.github.io/cyberlens/exhibit.html?topic=passwords"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Password Playground</a
+                    >
+                  </dt>
+                  <dd>Length, character variety, and predictable patterns.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <a
+                      href="https://veritycooper.github.io/cyberlens/exhibit.html?topic=hashing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Hashing Sandbox</a
+                    >
+                  </dt>
+                  <dd>How a tiny text change transforms a digital fingerprint.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <a
+                      href="https://veritycooper.github.io/cyberlens/exhibit.html?topic=encryption"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Encryption Visualiser</a
+                    >
+                  </dt>
+                  <dd>A gentle lock-and-key demo for readable vs protected text.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <a
+                      href="https://veritycooper.github.io/cyberlens/exhibit.html?topic=phishing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Phishing Spotter</a
+                    >
+                  </dt>
+                  <dd>Tap clues in a suspicious message and compare safer patterns.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <a
+                      href="https://veritycooper.github.io/cyberlens/exhibit.html?topic=wifi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Public WiFi Simulator</a
+                    >
+                  </dt>
+                  <dd>Open vs protected traffic on a shared café network.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <a
+                      href="https://veritycooper.github.io/cyberlens/exhibit.html?topic=footprint"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Digital Footprint Explorer</a
+                    >
+                  </dt>
+                  <dd>How everyday data signals combine into a simple profile.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <a
+                      href="https://veritycooper.github.io/cyberlens/exhibit.html?topic=scenarios"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Social Engineering Scenarios</a
+                    >
+                  </dt>
+                  <dd>Practise safer responses to common manipulation tactics.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="source-card context-card">
+              <h3>Design approach</h3>
+              <dl class="context-detail-list">
+                <div>
+                  <dt>Museum, not classroom</dt>
+                  <dd>
+                    Visitors explore at their own pace instead of following a
+                    rigid course structure.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Calm over alarming</dt>
+                  <dd>
+                    Soft visuals and plain language — curiosity rather than fear
+                    drives the experience.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Show, then explain</dt>
+                  <dd>
+                    Hands-on panels come first; short explanations follow what
+                    the user just tried.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Accessible by default</dt>
+                  <dd>
+                    Reduced motion, higher contrast, and readable layouts for
+                    different learners.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+        </div>
         </div>
 
-        <aside class="case-study-sidebar">
-          <div class="source-card source-card-cta">
-            <h3>Try it yourself</h3>
+        <section class="case-study-gallery" aria-labelledby="gallery-heading">
+          <header class="case-study-section-heading">
+            <p class="eyebrow">All exhibits</p>
+            <h2 id="gallery-heading">Explore the full museum floor</h2>
             <p>
-              Open the live prototype and explore the exhibits in your browser.
+              The walkthrough above highlights cross-cutting features. Each
+              exhibit below is a self-contained panel on the live site — open
+              any one to try the interaction or jump into its deep-dive page.
             </p>
-            <div class="sidebar-actions">
-              <a
-                class="button primary"
-                href="https://veritycooper.github.io/cyberlens/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Launch CyberLens
-              </a>
-              <a
-                class="button secondary"
-                href="https://github.com/veritycooper/cyberlens"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on GitHub
-              </a>
+          </header>
+
+          <div class="exhibit-gallery">
+            <a
+              class="exhibit-gallery-card"
+              href="https://veritycooper.github.io/cyberlens/#passwords"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="exhibit-gallery-label">Exhibit 01</span>
+              <h3>Password Playground</h3>
+              <p>Adjust a password and watch strength, length, and patterns update live.</p>
+              <span class="exhibit-gallery-link">Open exhibit</span>
+            </a>
+
+            <a
+              class="exhibit-gallery-card"
+              href="https://veritycooper.github.io/cyberlens/#hashing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="exhibit-gallery-label">Exhibit 02</span>
+              <h3>Hashing Sandbox</h3>
+              <p>Change one character and see how differently a hash can read.</p>
+              <span class="exhibit-gallery-link">Open exhibit</span>
+            </a>
+
+            <a
+              class="exhibit-gallery-card"
+              href="https://veritycooper.github.io/cyberlens/#encryption"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="exhibit-gallery-label">Exhibit 03</span>
+              <h3>Encryption Visualiser</h3>
+              <p>Shift letters with a key to compare readable and protected text.</p>
+              <span class="exhibit-gallery-link">Open exhibit</span>
+            </a>
+
+            <a
+              class="exhibit-gallery-card"
+              href="https://veritycooper.github.io/cyberlens/#phishing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="exhibit-gallery-label">Exhibit 04</span>
+              <h3>Phishing Spotter</h3>
+              <p>Tap suspicious clues in a message and learn what safer patterns look like.</p>
+              <span class="exhibit-gallery-link">Open exhibit</span>
+            </a>
+
+            <a
+              class="exhibit-gallery-card"
+              href="https://veritycooper.github.io/cyberlens/#wifi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="exhibit-gallery-label">Exhibit 05</span>
+              <h3>Public WiFi Simulator</h3>
+              <p>Toggle open vs protected traffic on a shared café network.</p>
+              <span class="exhibit-gallery-link">Open exhibit</span>
+            </a>
+
+            <a
+              class="exhibit-gallery-card"
+              href="https://veritycooper.github.io/cyberlens/#footprint"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="exhibit-gallery-label">Exhibit 06</span>
+              <h3>Digital Footprint Explorer</h3>
+              <p>Layer everyday signals into a simple profile and see what adds up.</p>
+              <span class="exhibit-gallery-link">Open exhibit</span>
+            </a>
+
+            <a
+              class="exhibit-gallery-card"
+              href="https://veritycooper.github.io/cyberlens/#scenarios"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="exhibit-gallery-label">Exhibit 07</span>
+              <h3>Social Engineering Scenarios</h3>
+              <p>Practise pausing before you respond to common manipulation tactics.</p>
+              <span class="exhibit-gallery-link">Open exhibit</span>
+            </a>
+          </div>
+        </section>
+
+        <article class="project-detail-card case-study-accessibility">
+          <div class="case-study-split-card">
+            <div class="case-study-split-copy">
+              <p class="eyebrow">Inclusive design</p>
+              <h2>Accessibility &amp; settings</h2>
+              <p>
+                CyberLens is meant to feel welcoming to different learners, not
+                only people comfortable with fast motion and low-contrast UI. The
+                settings panel adjusts the local page only — no account, no
+                server, and no tracking.
+              </p>
+              <ul class="project-points">
+                <li>
+                  <strong>Reduce decorative motion</strong> — slows or removes
+                  ambient orbit animations and other non-essential movement for
+                  visitors who prefer a calmer screen.
+                </li>
+                <li>
+                  <strong>Increase contrast</strong> — strengthens text, borders,
+                  and focus states so exhibits remain readable in brighter rooms
+                  or for users who need sharper visual separation.
+                </li>
+                <li>
+                  <strong>Plain-language labels</strong> — exhibit copy avoids
+                  acronyms where possible; when terms like HTTPS or VPN appear on
+                  deep-dive pages, they are spelled out inline.
+                </li>
+                <li>
+                  <strong>Keyboard-friendly structure</strong> — exhibits use
+                  semantic headings, buttons, and form controls so interactions
+                  stay usable without relying on precise mouse work alone.
+                </li>
+              </ul>
+              <p>
+                <a
+                  href="https://veritycooper.github.io/cyberlens/#settings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Try accessibility settings on the live site</a
+                >
+              </p>
             </div>
-          </div>
 
-          <div class="source-card">
-            <h3>Exhibits</h3>
-            <ul class="project-points sidebar-points">
-              <li>Password Playground</li>
-              <li>Hashing Sandbox</li>
-              <li>Encryption Visualiser</li>
-              <li>Phishing Spotter</li>
-              <li>Public WiFi Simulator</li>
-              <li>Digital Footprint Explorer</li>
-              <li>Social Engineering Scenarios</li>
-            </ul>
+            <figure class="case-study-inline-shot">
+              <img
+                src="../images/cyberlens/accessibility-settings.png"
+                alt="CyberLens accessibility settings with reduce motion and increase contrast toggles"
+              />
+              <figcaption>Settings stay on the device — preferences are not sent anywhere.</figcaption>
+            </figure>
           </div>
+        </article>
 
-          <div class="source-card">
-            <h3>Design approach</h3>
-            <ul class="project-points sidebar-points">
-              <li>Science-museum inspired, curiosity-driven</li>
-              <li>Calm visuals over alarm-heavy styling</li>
-              <li>Short explanations with hands-on panels</li>
-              <li>Beginner-friendly language throughout</li>
-            </ul>
+        <article class="project-detail-card case-study-notes">
+          <h2>Technical notes</h2>
+          <p>
+            CyberLens is a static site with no build step, no package manager,
+            and no backend. All interactivity is handled in the browser with
+            vanilla JavaScript modules loaded per page.
+          </p>
+
+          <h3>Information architecture</h3>
+          <ol class="project-points case-study-flow">
+            <li>
+              <strong>Museum lobby</strong> — <code>index.html</code> introduces
+              the concept and hosts inline exhibit panels visitors can scroll
+              through.
+            </li>
+            <li>
+              <strong>Deep-dive pages</strong> — <code>exhibit.html?topic=...</code>
+              expands one topic with a larger experiment, a watch list, Level Up
+              notes, and Museum Note takeaways.
+            </li>
+            <li>
+              <strong>Shared styling</strong> — <code>base.css</code> handles
+              layout and typography; <code>cyberlens.css</code> carries the
+              museum visual language.
+            </li>
+            <li>
+              <strong>Exhibit logic</strong> — <code>cyberlens.js</code> powers
+              lobby interactions; <code>cyberlens-exhibit.js</code> renders each
+              deep-dive from a single data structure.
+            </li>
+          </ol>
+
+          <h3>Deployment</h3>
+          <ul class="project-points">
+            <li>Hosted on GitHub Pages from the <code>main</code> branch</li>
+            <li>No API keys, databases, or server-side rendering</li>
+            <li>Accessibility preferences stored with <code>localStorage</code></li>
+            <li>Repository includes setup and deployment notes in the README</li>
+          </ul>
+        </article>
+
+        <!--
+          Walkthrough video — when your recording is ready, replace the
+          placeholder below with one of these options:
+
+          Option A — self-hosted MP4 (save to videos/cyberlens-walkthrough.mp4):
+          <video class="case-study-video-player" controls playsinline poster="../images/cyberlens/hero.png">
+            <source src="../videos/cyberlens-walkthrough.mp4" type="video/mp4" />
+            Your browser does not support embedded video.
+          </video>
+
+          Option B — YouTube embed:
+          <iframe
+            class="case-study-video-embed"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            title="CyberLens walkthrough"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        -->
+        <article class="project-detail-card case-study-video">
+          <p class="eyebrow">Demo</p>
+          <h2>Walkthrough video</h2>
+          <p>
+            A short screen recording will go here — ideally 30–60 seconds showing
+            a visitor moving through the lobby, trying an exhibit, and opening a
+            deep-dive page.
+          </p>
+          <div class="case-study-video-frame media-placeholder">
+            <p>
+              Video coming soon. Record your screen, export as MP4, then swap this
+              placeholder for a <code>&lt;video&gt;</code> or YouTube embed — see
+              the HTML comment above this section for copy-paste examples.
+            </p>
           </div>
-        </aside>
+        </article>
+
+        <article class="project-detail-card">
+          <h2>What I learned</h2>
+          <p>
+            Building CyberLens pushed me to explain security ideas in plain
+            language without flattening them into something wrong. I got more
+            comfortable with educational UX — pacing, progressive disclosure, and
+            knowing when to stop adding features.
+          </p>
+          <p>
+            It also reinforced how much accessibility and visual tone matter in
+            security education: the same facts feel very different when they are
+            delivered through alarm graphics versus calm, curiosity-led design.
+            Shipping a complete static prototype end-to-end was good practice in
+            scope control and maintainable front-end structure.
+          </p>
+        </article>
+
+        <article class="project-detail-card">
+          <h2>Inspiration</h2>
+          <p>
+            CyberLens draws on interactive science museums — spaces where you
+            learn by trying things, wandering at your own pace, and leaving with
+            one memorable idea rather than a wall of text. I also took cues from
+            explainable technology demos and beginner-friendly security writing
+            that respects the reader’s time.
+          </p>
+          <p>
+            The underlying belief is simple: people are more likely to build safer
+            habits when they understand <em>why</em> something matters, not when
+            they are overwhelmed by jargon or fear.
+          </p>
+        </article>
       </section>
     </main>
 
