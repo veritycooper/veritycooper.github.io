@@ -85,8 +85,9 @@
           </p>
         </article>
 
-        <article class="project-detail-card">
-          <h2>Why I built it</h2>
+        <div class="case-study-pair">
+          <article class="project-detail-card">
+            <h2>Why I built it</h2>
           <p>
             Cyber security is often taught through dense terminology, alarm-heavy
             messaging, or course-style modules that assume prior knowledge. I
@@ -100,10 +101,10 @@
             never had a calm space to explore what they actually mean. The goal
             is confidence through understanding, not fear through jargon.
           </p>
-        </article>
+          </article>
 
-        <article class="project-detail-card">
-          <h2>Design process</h2>
+          <article class="project-detail-card">
+            <h2>Design process</h2>
           <p>
             The first version felt too much like a traditional course — linear
             sections, lots of reading upfront, and a tone that still sounded
@@ -118,7 +119,8 @@
             kept removing features that felt clever but distracting, favouring
             clarity over completeness.
           </p>
-        </article>
+          </article>
+        </div>
 
         <article class="project-detail-card">
           <h2>Challenges &amp; tradeoffs</h2>
@@ -166,8 +168,10 @@
                     alt="Public WiFi Simulator exhibit showing HTTPS protection toggle"
                   />
                   <figcaption>
-                    <strong>Public WiFi Simulator</strong>
-                    Compare open and protected traffic on a shared network.
+                    <strong>Hands-on exhibits</strong>
+                    The main site turns each security topic into a panel visitors
+                    can adjust, toggle, and explore without leaving the museum
+                    floor.
                   </figcaption>
                 </figure>
 
@@ -177,9 +181,10 @@
                     alt="Deep-dive WiFi exhibit showing readable traffic on open café WiFi"
                   />
                   <figcaption>
-                    <strong>Go deeper</strong>
-                    See what a nearby observer might notice — and how HTTPS changes
-                    what is visible.
+                    <strong>Deep-dive pages</strong>
+                    Optional exhibit pages give one idea more room — a larger
+                    experiment, watch lists, and everyday connections when
+                    visitors want to go further.
                   </figcaption>
                 </figure>
 
@@ -190,7 +195,8 @@
                   />
                   <figcaption>
                     <strong>Level Up</strong>
-                    Concepts broken into short steps, with more detail on demand.
+                    Stepped notes break complex ideas into short pieces. More
+                    detail appears only when someone asks for it, not upfront.
                   </figcaption>
                 </figure>
 
@@ -201,7 +207,8 @@
                   />
                   <figcaption>
                     <strong>Museum Notes</strong>
-                    Jargon-free takeaways visitors can remember after each exhibit.
+                    Plain-language takeaway cards help visitors remember one
+                    practical idea before they move on to the next topic.
                   </figcaption>
                 </figure>
               </div>
@@ -438,45 +445,194 @@
           </ul>
         </article>
 
-        <!--
-          Walkthrough video — when your recording is ready, replace the
-          placeholder below with one of these options:
-
-          Option A — self-hosted MP4 (save to videos/cyberlens-walkthrough.mp4):
-          <video class="case-study-video-player" controls playsinline poster="../images/cyberlens/hero.png">
-            <source src="../videos/cyberlens-walkthrough.mp4" type="video/mp4" />
-            Your browser does not support embedded video.
-          </video>
-
-          Option B — YouTube embed:
-          <iframe
-            class="case-study-video-embed"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            title="CyberLens walkthrough"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        -->
         <article class="project-detail-card case-study-video">
           <p class="eyebrow">Demo</p>
           <h2>Walkthrough video</h2>
           <p>
-            A short screen recording will go here — ideally 30–60 seconds showing
-            a visitor moving through the lobby, trying an exhibit, and opening a
-            deep-dive page.
+            A screen recording of the lobby, an inline exhibit, and a deep-dive
+            page — showing how visitors move through the museum floor.
           </p>
-          <div class="case-study-video-frame media-placeholder">
-            <p>
-              Video coming soon. Record your screen, export as MP4, then swap this
-              placeholder for a <code>&lt;video&gt;</code> or YouTube embed — see
-              the HTML comment above this section for copy-paste examples.
-            </p>
-          </div>
+          <video
+            class="case-study-video-player"
+            controls
+            playsinline
+            preload="metadata"
+            poster="../images/cyberlens/hero.png"
+          >
+            <source src="../videos/cyberlens-walkthrough.mp4" type="video/mp4" />
+            Your browser does not support embedded video.
+          </video>
         </article>
 
-        <article class="project-detail-card">
-          <h2>What I learned</h2>
+        <section
+          class="project-detail-card case-study-exhibit-carousel"
+          aria-labelledby="exhibit-carousel-heading"
+        >
+          <header class="exhibit-carousel-heading">
+            <p class="eyebrow">The museum floor</p>
+            <h2 id="exhibit-carousel-heading">All seven exhibits</h2>
+            <p>
+              A closer look at each interactive panel on the live site — what it
+              teaches and how visitors explore it.
+            </p>
+          </header>
+
+          <div class="exhibit-carousel" data-exhibit-carousel tabindex="0">
+            <div class="exhibit-carousel-viewport">
+              <button
+                class="exhibit-carousel-nav"
+                type="button"
+                data-carousel-prev
+                aria-label="Previous exhibit"
+              >
+                <span aria-hidden="true">‹</span>
+              </button>
+
+              <div class="exhibit-carousel-track" data-carousel-track>
+                <figure class="exhibit-carousel-slide" data-carousel-slide>
+                  <div class="exhibit-carousel-visual">
+                    <img
+                      src="../images/cyberlens/exhibits/password-playground.png"
+                      alt="Password Playground exhibit showing live password strength feedback"
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Password Playground</strong>
+                    <p>
+                      Type a password and watch length, character variety, and
+                      predictable patterns update live — a gentle way to see why
+                      longer, less obvious choices are harder to guess.
+                    </p>
+                  </figcaption>
+                </figure>
+
+                <figure class="exhibit-carousel-slide" data-carousel-slide>
+                  <div class="exhibit-carousel-visual">
+                    <img
+                      src="../images/cyberlens/exhibits/hashing-sandbox.png"
+                      alt="Hashing Sandbox exhibit comparing two hash outputs"
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Hashing Sandbox</strong>
+                    <p>
+                      Change a single character and compare two hashes side by
+                      side. The exhibit shows how tiny edits create completely
+                      different digital fingerprints.
+                    </p>
+                  </figcaption>
+                </figure>
+
+                <figure class="exhibit-carousel-slide" data-carousel-slide>
+                  <div class="exhibit-carousel-visual">
+                    <img
+                      src="../images/cyberlens/exhibits/encryption-visualiser.png"
+                      alt="Encryption Visualiser exhibit with letter-shift ciphertext output"
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Encryption Visualiser</strong>
+                    <p>
+                      Shift letters with a key to turn readable text into
+                      protected ciphertext — a simple lock-and-key demo without
+                      heavy maths.
+                    </p>
+                  </figcaption>
+                </figure>
+
+                <figure class="exhibit-carousel-slide" data-carousel-slide>
+                  <div class="exhibit-carousel-visual">
+                    <img
+                      src="../images/cyberlens/exhibits/phishing-spotter.png"
+                      alt="Phishing Spotter exhibit with a suspicious email comparison"
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Phishing Spotter</strong>
+                    <p>
+                      Tap clues inside a suspicious message and compare it with
+                      safer patterns — urgency, odd links, and impersonation made
+                      visible.
+                    </p>
+                  </figcaption>
+                </figure>
+
+                <figure class="exhibit-carousel-slide" data-carousel-slide>
+                  <div class="exhibit-carousel-visual">
+                    <img
+                      src="../images/cyberlens/exhibits/public-wifi-simulator.png"
+                      alt="Public WiFi Simulator exhibit on the CyberLens main site"
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Public WiFi Simulator</strong>
+                    <p>
+                      Toggle open vs protected traffic on a shared café network
+                      and see what changes for a nearby observer when HTTPS is
+                      switched on.
+                    </p>
+                  </figcaption>
+                </figure>
+
+                <figure class="exhibit-carousel-slide" data-carousel-slide>
+                  <div class="exhibit-carousel-visual">
+                    <img
+                      src="../images/cyberlens/exhibits/digital-footprint.png"
+                      alt="Digital Footprint Explorer exhibit layering profile signals"
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Digital Footprint Explorer</strong>
+                    <p>
+                      Layer everyday signals — location habits, interests,
+                      purchases — and watch them combine into a simple profile
+                      visitors might not expect.
+                    </p>
+                  </figcaption>
+                </figure>
+
+                <figure class="exhibit-carousel-slide" data-carousel-slide>
+                  <div class="exhibit-carousel-visual">
+                    <img
+                      src="../images/cyberlens/exhibits/social-engineering.png"
+                      alt="Social Engineering Scenarios exhibit with response choices"
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>Social Engineering Scenarios</strong>
+                    <p>
+                      Choose how to respond to common manipulation tactics and
+                      compare safer pauses — practise before a real nudge arrives.
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <button
+                class="exhibit-carousel-nav"
+                type="button"
+                data-carousel-next
+                aria-label="Next exhibit"
+              >
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+
+            <div class="exhibit-carousel-footer">
+              <div
+                class="exhibit-carousel-dots"
+                data-carousel-dots
+                role="tablist"
+                aria-label="Exhibit slides"
+              ></div>
+              <p class="exhibit-carousel-status" data-carousel-status aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-study-pair">
+          <article class="project-detail-card">
+            <h2>What I learned</h2>
           <p>
             Building CyberLens pushed me to explain security ideas in plain
             language without flattening them into something wrong. I got more
@@ -490,10 +646,10 @@
             Shipping a complete static prototype end-to-end was good practice in
             scope control and maintainable front-end structure.
           </p>
-        </article>
+          </article>
 
-        <article class="project-detail-card">
-          <h2>Inspiration</h2>
+          <article class="project-detail-card">
+            <h2>Inspiration</h2>
           <p>
             CyberLens draws on interactive science museums — spaces where you
             learn by trying things, wandering at your own pace, and leaving with
@@ -506,12 +662,14 @@
             habits when they understand <em>why</em> something matters, not when
             they are overwhelmed by jargon or fear.
           </p>
-        </article>
+          </article>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <p>© 2026 Verity Cooper. Built for GitHub Pages.</p>
     </footer>
+    <script src="../js/cyberlens-carousel.js"></script>
   </body>
 </html>
