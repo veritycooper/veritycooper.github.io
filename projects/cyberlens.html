@@ -68,25 +68,27 @@
       </section>
 
       <section class="section case-study-body">
-        <article class="project-detail-card case-study-overview">
-          <h2>Overview</h2>
-          <p>
-            Cyber security can feel overwhelming when it is taught through dense
-            terminology. CyberLens makes core ideas tangible: adjust a password
-            and watch strength change, edit one character and see a hash
-            transform, or tap clues in a suspicious message to understand
-            phishing patterns.
-          </p>
-          <p>
-            I built it to combine security, user experience, accessibility, and
-            educational design — helping people feel more confident online
-            through exploration rather than fear. The prototype runs entirely
-            on GitHub Pages with vanilla HTML, CSS, and JavaScript.
-          </p>
+        <div class="case-study-story">
+          <article class="case-study-section case-study-overview">
+            <p class="eyebrow">Project story</p>
+            <h2>Overview</h2>
+            <p>
+              Cyber security can feel overwhelming when it is taught through dense
+              terminology. CyberLens makes core ideas tangible: adjust a password
+              and watch strength change, edit one character and see a hash
+              transform, or tap clues in a suspicious message to understand
+              phishing patterns.
+            </p>
+            <p>
+              I built it to combine security, user experience, accessibility, and
+              educational design — helping people feel more confident online
+              through exploration rather than fear. The prototype runs entirely
+              on GitHub Pages with vanilla HTML, CSS, and JavaScript.
+            </p>
         </article>
 
-        <div class="case-study-pair">
-          <article class="project-detail-card">
+        <div class="case-study-pair case-study-story-grid">
+          <article class="case-study-section">
             <h2>Why I built it</h2>
           <p>
             Cyber security is often taught through dense terminology, alarm-heavy
@@ -103,7 +105,7 @@
           </p>
           </article>
 
-          <article class="project-detail-card">
+          <article class="case-study-section">
             <h2>Design process</h2>
           <p>
             The first version felt too much like a traditional course — linear
@@ -120,11 +122,10 @@
             clarity over completeness.
           </p>
           </article>
-        </div>
 
-        <article class="project-detail-card">
-          <h2>Challenges &amp; tradeoffs</h2>
-          <ul class="project-points">
+          <article class="case-study-section case-study-challenges">
+            <h2>Challenges &amp; tradeoffs</h2>
+            <ul class="project-points">
             <li>
               <strong>Simplifying without misleading.</strong> Hashing and
               encryption demos are educational sketches, not production
@@ -145,8 +146,10 @@
               for a solo prototype; deep-dive pages share one template to keep
               the codebase maintainable.
             </li>
-          </ul>
-        </article>
+            </ul>
+          </article>
+        </div>
+        </div>
 
         <div class="case-study-walkthrough">
           <p class="eyebrow showcase-eyebrow">Prototype walkthrough</p>
@@ -339,7 +342,8 @@
           </div>
         </div>
 
-        <article class="project-detail-card case-study-accessibility">
+        <div class="case-study-details">
+        <article class="case-study-panel case-study-accessibility">
           <div class="case-study-accessibility-intro">
             <p class="eyebrow">Inclusive design</p>
             <h2>Accessibility &amp; settings</h2>
@@ -395,7 +399,8 @@
           </figure>
         </article>
 
-        <article class="project-detail-card case-study-notes">
+        <article class="case-study-panel case-study-notes">
+          <p class="eyebrow">Under the hood</p>
           <h2>Technical notes</h2>
           <p>
             CyberLens is a static site with no build step, no package manager,
@@ -445,7 +450,7 @@
           </ul>
         </article>
 
-        <article class="project-detail-card case-study-video">
+        <article class="case-study-panel case-study-video">
           <p class="eyebrow">Demo</p>
           <h2>Walkthrough video</h2>
           <p>
@@ -463,9 +468,10 @@
             Your browser does not support embedded video.
           </video>
         </article>
+        </div>
 
         <section
-          class="project-detail-card case-study-exhibit-carousel"
+          class="case-study-section case-study-exhibit-carousel"
           aria-labelledby="exhibit-carousel-heading"
         >
           <header class="exhibit-carousel-heading">
@@ -630,8 +636,10 @@
           </div>
         </section>
 
-        <div class="case-study-pair">
-          <article class="project-detail-card">
+        <div class="case-study-reflection">
+          <p class="eyebrow">Closing thoughts</p>
+          <div class="case-study-pair">
+          <article class="case-study-section">
             <h2>What I learned</h2>
           <p>
             Building CyberLens pushed me to explain security ideas in plain
@@ -648,7 +656,7 @@
           </p>
           </article>
 
-          <article class="project-detail-card">
+          <article class="case-study-section">
             <h2>Inspiration</h2>
           <p>
             CyberLens draws on interactive science museums — spaces where you
@@ -663,6 +671,7 @@
             they are overwhelmed by jargon or fear.
           </p>
           </article>
+          </div>
         </div>
       </section>
     </main>
